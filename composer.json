@@ -1,0 +1,23 @@
+{
+    "name": "portospire/psframeworkclient",
+    "description": "Description of project PSFrameworkClient.",
+    "license": "GNU LGPLv3",
+    "keywords": [
+        "portospire"
+    ],
+    "authors": [
+        {
+            "name": "Andrew Wallace",
+            "email": "andrew.wallace@portospire.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PortoSpire\\PSFrameworkClient\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "php":"^7.0"
+    }
+}

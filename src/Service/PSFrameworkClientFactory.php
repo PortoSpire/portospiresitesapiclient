@@ -51,7 +51,7 @@ use Psr\Log\NullLogger;
  * @since     Class available since Release 0.0.0
  */
 class PSFrameworkClientFactory {
-    public function __invoke(ContainerInterface $container) : SuiteCrm
+    public function __invoke(ContainerInterface $container) : PSFrameworkClient
     {
         $logger = null;
         if($container->has('Logger')){

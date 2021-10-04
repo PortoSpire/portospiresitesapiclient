@@ -55,7 +55,7 @@ use \Psr\Log\LoggerInterface;
  * @since     Class available since Release 0.0.0
  */
 class PSFrameworkClient {
-    const _access_url = 'access_token',
+    const _access_url = '/oauth',
         _rest_url = '/',
         _modes = ['GET' => 'get', 'POST' => 'post', 'PUT' => 'put', 'PATCH' => 'patch', 'DELETE' => 'delete'];
 
@@ -82,6 +82,22 @@ class PSFrameworkClient {
         }
         $this->guzzle = new Client(['headers' => ['Content-type: application/vnd.api+json',
                 'Accept: */*']]);
+    }
+    
+    public function setConfig(array $config)
+    {
+        if (isset($config['ClientId'])) {
+            $this->client_id = $config['ClientId'];
+        }
+        if (isset($config['ClientSecret'])) {
+            $this->client_secret = $config['ClientSecret'];
+        }
+        if (isset($config['ServerDomain'])) {
+            $this->server_domain = $config['ServerDomain'];
+        }
+        if(isset($config['Scopes'])){
+            $this->scopes = $config['Scopes'];
+        }
     }
     
     /*
@@ -155,14 +171,12 @@ class PSFrameworkClient {
             return $this->access_token;
         }
         try {
-            $response = $this->guzzle->request('POST', 'https://' . $this->server_domain . '/Api/' . $this::_access_url, ['multipart' =>
+            $response = $this->guzzle->request('POST', 'https://' . $this->server_domain . $this::_access_url, ['multipart' =>
                 [
                     ['name' => 'grant_type', 'contents' => 'client_credentials'],
                     ['name' => 'client_id', 'contents' => $this->client_id],
-                    ['name' => 'scope','contents' => explode(' ', $this->scopes)],
-                    ['name' => 'client_secret', 'contents' => $this->client_secret,
-                        'headers' => ['Content-type: application/vnd.api+json',
-                            'Accept: application/vnd.api+json']]
+                    ['name' => 'scope','contents' => implode(' ', $this->scopes)],
+                    ['name' => 'client_secret', 'contents' => $this->client_secret]
                 ],
             ]);
             if ($response->getStatusCode() === 200) {
@@ -189,7 +203,6 @@ class PSFrameworkClient {
         } catch (\Exception $e) {
             $this->logger->error('PSFramework: unable to get access token. ' . $e->getMessage());
         }
-
         throw new \Exception('PSFramework: unable to fetch access token. Check the logs for details.');
     }
 

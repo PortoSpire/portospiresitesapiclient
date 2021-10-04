@@ -34,3 +34,55 @@
  */
 
 namespace PortoSpire\PSFrameworkClient;
+/**
+ * Description of ConfigProvider
+ * 
+ * The configuration provider for SuiteCRMClient for Zend Expressive
+ *
+ * @category  Config Provider
+ * @package   PSFrameworkClient
+ * @author    Andrew Wallace <andrew.wallace@portospire.com>
+ * @copyright 2021 PORTOSPIRE
+ * @license   proprietary
+ * @version   Release: @package_version@
+ * @link      https://coderepo.portospire.com/#git_repo_name
+ * @since     Class available since Release 0.0.1
+ */
+class ConfigProvider
+{
+    
+    /**
+     * Returns the configuration array
+     */
+    public function __invoke(): array
+    {
+        return [
+            'dependencies' => $this->getDependencies(),
+            'templates' => $this->getTemplates(),
+        ];
+    }
+
+    /**
+     * Returns the container dependencies
+     */
+    public function getDependencies(): array
+    {
+        return [
+            'factories' => [
+                Service\PSFrameworkClient::class => Service\PSFrameworkClientFactory::class,
+            ],
+        ];
+    }
+
+    /**
+     * Returns the templates configuration
+     */
+    public function getTemplates(): array
+    {
+        return [
+            'paths' => [
+            ],
+        ];
+    }
+
+}

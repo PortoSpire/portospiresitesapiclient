@@ -28,7 +28,7 @@
  * @package   PackageName
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary, Confidential
+ * @license   LGPL 3
  * @version   GIT: $ID$
  * @link      https://portospire.com 
  */
@@ -43,7 +43,7 @@ namespace PortoSpire\PSFrameworkClient;
  * @package   PSFrameworkClient
  * @author    Andrew Wallace <andrew.wallace@portospire.com>
  * @copyright 2021 PORTOSPIRE
- * @license   proprietary
+ * @license   LGPL 3
  * @version   Release: @package_version@
  * @link      https://coderepo.portospire.com/#git_repo_name
  * @since     Class available since Release 0.0.1

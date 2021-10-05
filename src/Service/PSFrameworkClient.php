@@ -100,6 +100,12 @@ class PSFrameworkClient {
         }
     }
     
+    public function setAccessToken($token,$expires)
+    {
+        $this->access_token = $token;
+        $this->token_expires = $expires;
+    }
+    
     /*
      * applies to bearer tokens
      */

@@ -140,7 +140,7 @@ class PSFrameworkClient {
     public function callApi(string $uri, string $http_mode, string $body = null)
     {
         $mode = $this->checkMode($http_mode);
-        if (!isset($this->token_expires) || time >= $this->token_expires) {
+        if (!isset($this->token_expires) || time() >= $this->token_expires) {
             $access_token = $this->getAccessToken();
         }
         try {

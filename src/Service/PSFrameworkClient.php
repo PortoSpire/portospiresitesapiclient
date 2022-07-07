@@ -147,7 +147,7 @@ class PSFrameworkClient {
             $this->logger->debug('Requesting api uri: ' . $uri);
             $request = new Request($mode, "https://{$this->server_domain}/{$uri}",
                 [
-                    "Authorization" => "Bearer {$access_token}",
+                    "Authorization" => "Bearer {$this->access_token}",
                     "Content-Type" => "application/vnd.api+json",
                     "Cache-Control" => "no-cache",
                 ]

@@ -177,12 +177,14 @@ class PSFrameworkClient {
             return $this->access_token;
         }
         try {
-            $response = $this->guzzle->request('POST', 'https://' . $this->server_domain . $this::_access_url, ['multipart' =>
+            $response = $this->guzzle->request('POST', 'https://' . $this->server_domain . 
+                    $this::_access_url, ['headers' => ['Content-type: application/x-www-form-urlencoded'],
+                    'form_params' =>
                 [
-                    ['name' => 'grant_type', 'contents' => 'client_credentials'],
-                    ['name' => 'client_id', 'contents' => $this->client_id],
-                    ['name' => 'scope','contents' => implode(' ', $this->scopes)],
-                    ['name' => 'client_secret', 'contents' => $this->client_secret]
+                    'grant_type' => 'client_credentials',
+                    'client_id' => $this->client_id,
+                    'scope' => implode(' ', $this->scopes),
+                    'client_secret' => $this->client_secret
                 ],
             ]);
             if ($response->getStatusCode() === 200) {

@@ -6,7 +6,7 @@
  * PHP version 7
  * 
  * * * License * * * 
- * Copyright (C) 2021 andrewwallace.
+ * Copyright (C) 2021 PORTOSPIRE, All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -51,9 +51,9 @@ class Generic {
     public $id, $type;
     private $attributes;
     
-    public function __construct()
+    public function __construct($attributes = [])
     {
-        $this->attributes = [];
+        $this->attributes = $attributes;
     }
     
     public function __get($name)

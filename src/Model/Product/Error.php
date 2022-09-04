@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Error extends Generic {
     public function __construct() {
-        parent::__construct([]);
+        parent::__construct(['heading','description']);
         $this->type = 'product.error';
     }
 }

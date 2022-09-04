@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Info extends Generic {
     public function __construct() {
-        parent::__construct($attributes);
+        parent::__construct(['heading','description']);
         $this->type = 'product.info';
     }
 }

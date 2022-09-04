@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Issue extends Generic {
     public function __construct() {
-        parent::__construct([]);
+        parent::__construct(['issue_start','issue_end','description']);
         $this->type = 'service.issue';
     }
 }

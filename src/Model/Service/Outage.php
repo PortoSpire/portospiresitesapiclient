@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Outage extends Generic {
     public function __construct() {
-        parent::__construct([]);
+        parent::__construct(['outage_start','outage_end','description']);
         $this->type = 'service.outage';
     }
 }

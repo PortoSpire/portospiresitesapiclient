@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Maintenance extends Generic {
     public function __construct() {
-        parent::__construct([]);
+        parent::__construct(['window_start','window_end','description']);
         $this->type = 'service.maintenance';
     }
 }

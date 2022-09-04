@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Newdevice extends Generic {
     public function __construct() {
-        parent::__construct([]);
+        parent::__construct(['when','device','who']);
         $this->type = 'security.newdevice';
     }
 }

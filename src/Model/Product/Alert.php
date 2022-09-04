@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Alert extends Generic {
     public function __construct() {
-        parent::__construct([]);
+        parent::__construct(['heading','description']);
         $this->type = 'product.alert';
     }
 }

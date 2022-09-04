@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Description of Notice
+ * Description of Exception
  * 
- * PHP version 7
+ * PHP version 8
  * 
  * * * License * * * 
  * Copyright (C) 2022 PORTOSPIRE, All Rights Reserved.
@@ -28,30 +28,25 @@
  * @package   PackageName
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
- * @license   LGPL 3
+ * @license   https://portospire.com/policies Proprietary, Confidential
  * @version   GIT: $ID$
  * @link      https://portospire.com 
  */
 
-namespace PortoSpire\PSFrameworkClient\Model\Product;
-
-use PortoSpire\PSFrameworkClient\Model\Generic;
+namespace PortoSpire\PSFrameworkClient\Exception;
 
 /**
- * Description of Notice
+ * Description of Exception
  *
  * @category  CategoryName
  * @package   PackageName
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
- * @license   LGPL 3
+ * @license   https://portospire.com/policies Proprietary
  * @version   Release: @package_version@
  * @link      https://coderepo.portospire.com/#git_repo_name
  * @since     Class available since Release 0.0.0
  */
-class Notice extends Generic{
-    public function __construct() {
-        parent::__construct(['heading','description']);
-        $this->type = 'product.notice';
-    }
+interface Exception extends \Throwable{
+    
 }

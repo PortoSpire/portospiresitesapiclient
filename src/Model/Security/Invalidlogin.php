@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Invalidlogin extends Generic {
     public function __construct() {
-        parent::__construct([]);
+        parent::__construct(['when','who']);
         $this->type = 'security.invalidlogin';
     }
 }

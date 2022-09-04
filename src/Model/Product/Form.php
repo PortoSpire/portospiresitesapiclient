@@ -51,7 +51,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
  */
 class Form extends Generic {
     public function __construct() {
-        parent::__construct([]);
+        parent::__construct(['form_id','submitted_dtm','submitted_state','detail']);
         $this->type = 'product.form:submitted';
     }
 }

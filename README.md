@@ -10,6 +10,7 @@ A free (LGPL3) client library for use with PSFramework to abstract various API u
 * [Mezzio](#mezzio)
 * [Laminas MVC](#laminasmvc)
 * [Standalone](#standalone)
+* [Webhooks](#webhooks)
   
 
 ## <a name="introduction" href="#introduction">Introduction</a>
@@ -33,3 +34,5 @@ Add the module to the module config (typically found in APP_DIR/config/modules.c
 > PSFrameworkClient
 
 ### <a name="standalone" href="#standalone">Standalone</a>
+
+### <a name="webhooks" href="#webhooks">Webhooks</a>

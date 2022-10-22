@@ -189,16 +189,22 @@ class PSFrameworkClient {
         }
         try {
             $this->logger->debug('Requesting api uri: ' . $uri);
-            $request = new Request($mode, "https://{$this->server_domain}/{$uri}",
-                    [
-                "Authorization" => "Bearer {$this->access_token}",
-                "Content-Type" => "application/vnd.api+json",
-                "Cache-Control" => "no-cache",
-                    ]
-            );
-
-            if (!is_null($body)) {
-                $request->setBody($body);
+            if(!is_null($body)){
+                $request = new Request($mode, "https://{$this->server_domain}/{$uri}",
+                        [
+                    "Authorization" => "Bearer {$this->access_token}",
+                    "Content-Type" => "application/vnd.api+json",
+                    "Cache-Control" => "no-cache",
+                        ],$body
+                );
+            } else {
+                $request = new Request($mode, "https://{$this->server_domain}/{$uri}",
+                        [
+                    "Authorization" => "Bearer {$this->access_token}",
+                    "Content-Type" => "application/vnd.api+json",
+                    "Cache-Control" => "no-cache",
+                        ]
+                );
             }
             $response = $this->guzzle->send($request);
             if ($response->getStatusCode() == 200) {

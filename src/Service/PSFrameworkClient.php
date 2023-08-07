@@ -83,7 +83,7 @@ class PSFrameworkClient {
         if (isset($config['password'])) {
             $this->password = $config['password'];
         }
-        $this->guzzle = new Client(['headers' => ['Content-type'=>'application/vnd.api+json',
+        $this->guzzle = new Client(['headers' => ['Content-Type'=>'application/vnd.api+json',
                 'Accept'=>'*/*']]);
     }
 
@@ -192,19 +192,18 @@ class PSFrameworkClient {
             $this->logger->debug('Requesting api uri: ' . $uri);
             if (!is_null($body)) {
                 $request = new Request($mode, "https://{$this->server_domain}/{$uri}",
-                        ['headers'=>[
-                    "Authorization" => "Bearer {$this->access_token}",
-                    "Content-Type" => "application/vnd.api+json",
-                    "Cache-Control" => "no-cache",
-                        ]], $body
+                        [
+                    'Authorization' => "Bearer {$this->access_token}",
+                    'Content-Type' => "application/vnd.api+json",
+                    'Cache-Control' => "no-cache",
+                        ], $body
                 );
             } else {
                 $request = new Request($mode, "https://{$this->server_domain}/{$uri}",
-                        ['headers'=>[
-                    "Authorization" => "Bearer {$this->access_token}",
-                    "Content-Type" => "application/vnd.api+json",
-                    "Cache-Control" => "no-cache",
-                        ]]
+                        ['Authorization' => "Bearer {$this->access_token}",
+                    'Content-Type' => "application/vnd.api+json",
+                    'Cache-Control' => "no-cache",
+                        ]
                 );
             }
             $response = $this->guzzle->send($request);
@@ -215,9 +214,9 @@ class PSFrameworkClient {
                 return false;
             }
         } catch (RequestException $e) {
-            $this->logger->notice(Psr7\str($e->getRequest()));
+            $this->logger->notice(Psr7\Message::toString($e->getRequest()));
             if ($e->hasResponse()) {
-                $this->logger->error(Psr7\str($e->getResponse()));
+                $this->logger->error(Psr7\Message::toString($e->getResponse()));
             }
         }
     }
@@ -250,16 +249,16 @@ class PSFrameworkClient {
                 $this->logger->error('PSFramework: unable to get access token. ' . $response->getBody());
             }
         } catch (RequestException $e) {
-            $this->logger->error(Psr7\str($e->getRequest()));
+            $this->logger->error(Psr7\Message::toString($e->getRequest()));
             if ($e->hasResponse()) {
-                $this->logger->error(Psr7\str($e->getResponse()));
+                $this->logger->error(Psr7\Message::toString($e->getResponse()));
             } else {
                 $this->logger->error($e->getMessage());
             }
         } catch (BadResponseException $e) {
-            $this->logger->error(Psr7\str($e->getRequest()));
+            $this->logger->error(Psr7\Message::toString($e->getRequest()));
             if ($e->hasResponse()) {
-                $this->logger->error(Psr7\str($e->getResponse()));
+                $this->logger->error(Psr7\Message::toString($e->getResponse()));
             }
         } catch (\Exception $e) {
             $this->logger->error('PSFramework: unable to get access token. ' . $e->getMessage());

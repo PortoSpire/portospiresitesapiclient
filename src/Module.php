@@ -48,7 +48,7 @@ namespace PortoSpire\PSFrameworkClient;
  * @since     Class available since Release 0.0.0
  */
 class Module {
-    const VERSION = "0.1.5.2";
+    const VERSION = "0.1.5.3";
  public function getConfig()
     {
         return include __DIR__ . '/../config/module.config.php';

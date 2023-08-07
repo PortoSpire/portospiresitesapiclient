@@ -83,8 +83,8 @@ class PSFrameworkClient {
         if (isset($config['password'])) {
             $this->password = $config['password'];
         }
-        $this->guzzle = new Client(['headers' => ['Content-type: application/vnd.api+json',
-                'Accept: */*']]);
+        $this->guzzle = new Client(['headers' => ['Content-type'=>'application/vnd.api+json',
+                'Accept'=>'*/*']]);
     }
 
     public function setConfig(array $config) {
@@ -159,12 +159,13 @@ class PSFrameworkClient {
      * @Throws SignatureVerificationException
      * @Throws UnexpectedValueException
      */
+
     public function verifyWebhook($secret, $body, $header = ''): bool {
         if (empty($header)) {
             $header = $_SERVER['HTTP_X_PSFRAMEWORK_SIGNATURE'];
         }
         $parsed = $this->extractSignatureVars($header);
-        if($parsed['timestamp'] > time() - 1000 * 60 * 5){
+        if ($parsed['timestamp'] > time() - 1000 * 60 * 5) {
             $this->logger->notice('PSFramework: webhook signature timestamp is too old.');
             throw new UnexpectedValueException('Signature timestamp is too old');
         }
@@ -175,7 +176,7 @@ class PSFrameworkClient {
                 $matched = true;
             }
         }
-        if(!$matched){
+        if (!$matched) {
             $this->logger->notice('PSFramework: webhook signature validation failed.');
             throw new SignatureVerificationException('Signature validation failed.');
         }
@@ -189,21 +190,21 @@ class PSFrameworkClient {
         }
         try {
             $this->logger->debug('Requesting api uri: ' . $uri);
-            if(!is_null($body)){
+            if (!is_null($body)) {
                 $request = new Request($mode, "https://{$this->server_domain}/{$uri}",
-                        [
+                        ['headers'=>[
                     "Authorization" => "Bearer {$this->access_token}",
                     "Content-Type" => "application/vnd.api+json",
                     "Cache-Control" => "no-cache",
-                        ],$body
+                        ]], $body
                 );
             } else {
                 $request = new Request($mode, "https://{$this->server_domain}/{$uri}",
-                        [
+                        ['headers'=>[
                     "Authorization" => "Bearer {$this->access_token}",
                     "Content-Type" => "application/vnd.api+json",
                     "Cache-Control" => "no-cache",
-                        ]
+                        ]]
                 );
             }
             $response = $this->guzzle->send($request);
@@ -227,7 +228,7 @@ class PSFrameworkClient {
         }
         try {
             $response = $this->guzzle->request('POST', 'https://' . $this->server_domain .
-                    $this::_access_url, ['headers' => ['Content-type: application/x-www-form-urlencoded'],
+                    $this::_access_url, [
                 'form_params' =>
                 [
                     'grant_type' => 'client_credentials',
@@ -235,6 +236,9 @@ class PSFrameworkClient {
                     'scope' => implode(' ', $this->scopes),
                     'client_secret' => $this->client_secret
                 ],
+                'headers' => [
+                    'Content-Type' => 'application/x-www-form-urlencoded'
+                ]
             ]);
             if ($response->getStatusCode() === 200) {
                 $out = json_decode($response->getBody(), true);
@@ -296,5 +300,4 @@ class PSFrameworkClient {
     public function setScopes(array $scopes) {
         $this->scopes = $scopes;
     }
-
 }

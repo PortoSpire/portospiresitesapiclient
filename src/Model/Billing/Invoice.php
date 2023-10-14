@@ -33,7 +33,7 @@
  * @link      https://portospire.com 
  */
 
-namespace PortoSpire\PSFrameworkClient\Model\Invoice;
+namespace PortoSpire\PSFrameworkClient\Model\Billing;
 
 use PortoSpire\PSFrameworkClient\Model\Generic;
 

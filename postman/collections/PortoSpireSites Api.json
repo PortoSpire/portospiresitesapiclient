@@ -30045,11 +30045,11 @@
 									"variable": [
 										{
 											"key": "site_id",
-											"value": ""
+											"value": "1"
 										},
 										{
 											"key": "locations_id",
-											"value": ""
+											"value": "111681da-3f84-11ee-aa0f-03280861ee14"
 										}
 									]
 								}
@@ -31593,6 +31593,16 @@
 		"type": "oauth2",
 		"oauth2": [
 			{
+				"key": "scope",
+				"value": "users:list user_sites:list useremail:list users:update users:get calendar:list calendar:get occasio_categories:get events:get events:write locations:get",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{api_service}}/oauth",
+				"type": "string"
+			},
+			{
 				"key": "tokenType",
 				"value": "",
 				"type": "string"
@@ -31603,18 +31613,8 @@
 				"type": "string"
 			},
 			{
-				"key": "scope",
-				"value": "users:list user_sites:list",
-				"type": "string"
-			},
-			{
 				"key": "client_authentication",
 				"value": "body",
-				"type": "string"
-			},
-			{
-				"key": "accessTokenUrl",
-				"value": "https://api.andrewwallace.localhost/oauth",
 				"type": "string"
 			},
 			{
@@ -31653,7 +31653,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1df07cd4-2571-4526-b296-dd6b6d5aa3c9",
+				"id": "8aa1bdef-54fe-47bc-9f4e-2b06878e7db9",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -31663,7 +31663,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "96a574e3-5ab6-43df-9a52-ad445c77bdf4",
+				"id": "10847af2-eebb-4999-b744-387338234ecd",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -31673,7 +31673,7 @@
 	],
 	"variable": [
 		{
-			"id": "3b011b0d-b524-47c3-a580-5a4d6a41a2a8",
+			"id": "f2a10c25-8c1e-400d-a0af-8ede18473624",
 			"key": "baseUrl",
 			"value": "{{api_service}}"
 		}

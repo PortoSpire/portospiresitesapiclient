@@ -5,6 +5,7 @@
 A free (LGPL3) client library for use with PortoSpire Sites to abstract various API usage to enable easier integrations.
 
 <a href="https://www.portospire.com/">Provided by PortoSpire 
+
     <img src="https://assets.portospire.com/psf/img/portospire%20header.svg" alt="PortoSpire - be seen" width="182" /></a>
 
 [Introduction](#introduction)

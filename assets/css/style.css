@@ -1,0 +1,4 @@
+@import "{{ site.theme }}"
+img#logo {
+  background-color:#66A4D9;
+}

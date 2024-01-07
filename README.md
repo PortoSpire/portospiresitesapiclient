@@ -1,9 +1,4 @@
-<style>
-#portospiresitesapiclientlogo {
-  background-color: #FFFFFF;
-}
-</style>
-<img src="https://assets.portospire.com/github.io/portospiresitesapiclientlogo.svg" id="portospiresitesapiclientlogo" style="max-height:25vh;color:#66A4D9;fill:#66A4D9;stroke:#66A4D9;" />
+<img src="https://assets.portospire.com/github.io/portospiresitesapiclientlogo.svg" id="portospiresitesapiclientlogo" style="color:#66A4D9;fill:#66A4D9;stroke:#66A4D9;" />
 
 <img src="https://img.shields.io/github/v/release/PortoSpire/portospiresitesapiclient" /> <img src="https://img.shields.io/github/languages/code-size/PortoSpire/portospiresitesapiclient" /> <img src="https://img.shields.io/github/license/PortoSpire/portospiresitesapiclient" />
 # Client library for use with PortoSpire Sites

@@ -88,6 +88,15 @@ return [
                     'quote:prepared'
                 ]
             ],
+            'calendar' => [
+                'class' => '',
+                'children' => [
+                    'event:updated',
+                    'eventtype:updated',
+                    'location:updated',
+                    'recurring:updated'
+                ]
+            ]
         ],
     ]
 ];

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of PSFrameworkClient
+ * Description of PortoSireSitesAPIClient
  * 
  * PHP version 7
  * 
@@ -24,16 +24,16 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Service
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient\Service;
+namespace PortoSpire\PortoSpireSitesAPIClient\Service;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
@@ -46,20 +46,21 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
 use Psr\Log\LoggerInterface;
 
 /**
- * Description of PSFrameworkClient
+ * Description of PortoSireSitesAPIClient
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Service
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class PSFrameworkClient {
+class PortoSireSitesAPIClient {
 
-    const _access_url = '/oauth',
+    const _api_version = '1',
+            _access_url = '/oauth',
             _rest_url = '/',
             _modes = ['GET' => 'get', 'POST' => 'post', 'PUT' => 'put', 'PATCH' => 'patch', 'DELETE' => 'delete'];
 

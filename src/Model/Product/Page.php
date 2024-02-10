@@ -24,29 +24,29 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient\Model\Product;
+namespace PortoSpire\PortoSireSitesAPIClient\Model\Product;
 
-use PortoSpire\PSFrameworkClient\Model\Generic;
+use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Page
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
 class Page extends Generic {

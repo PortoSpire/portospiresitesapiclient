@@ -1,6 +1,6 @@
 {
-    "name": "portospire/psframeworkclient",
-    "description": "Description of project PSFrameworkClient.",
+    "name": "portospire/portospiresitesapiclient",
+    "description": "Description of project PortoSireSitesAPIClient.",
     "license": "GNU LGPLv3",
     "keywords": [
         "portospire"
@@ -13,11 +13,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "PortoSpire\\PSFrameworkClient\\": "src/"
+            "PortoSpire\\PortoSpireSitesAPIClient":"src/"
         }
     },
     "require": {
         "guzzlehttp/guzzle": ">=7.7",
-        "php":"^7.0 || ^8.0 || ^8.1"
+        "php": "^8.0 || ^8.1 || ^8.2"
     }
 }

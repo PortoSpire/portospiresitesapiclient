@@ -24,30 +24,32 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2024 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary, Confidential
+ * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient\Model\Calendar;
+namespace PortoSpire\PortoSireSitesAPIClient\Model\Calendar;
+
+use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Event
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2024 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary
+ * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class Event extends \PortoSpire\PSFrameworkClient\Model\Generic{
+class Event extends Generic{
     public function __construct($attributes = ['event_id', 'calendar_id', 'name', 'description', 'active', 'submission_id', 
             'eventtype_id', 'start_date', 'end_date', 'start_time', 'end_time', 'is_full_day', 
             'parent_event_id', 'is_public','is_recurring', 'image',

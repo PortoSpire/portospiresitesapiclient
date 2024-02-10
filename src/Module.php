@@ -24,32 +24,35 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Module
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient;
+namespace PortoSpire\PortoSpireSitesAPIClient;
 
 /**
  * Description of Module
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Module
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class Module {
-    const VERSION = "0.2.0";
- public function getConfig()
+class Module
+{
+
+    const VERSION = "1.0.0";
+
+    public function getConfig()
     {
         return include __DIR__ . '/../config/module.config.php';
     }

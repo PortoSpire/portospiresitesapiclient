@@ -24,28 +24,32 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2024 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary, Confidential
+ * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
+
+namespace PortoSpire\PortoSireSitesAPIClient\Model\Locale;
+
+use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Country
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2024 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary
+ * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class Country Extends PortoSpire\PSFrameworkClient\Model\Generic {
+class Country Extends Generic {
     public function __construct($attributes = ['country_code', 'country_name', 
         'country_alpha3_code', 'country_numeric_code', 'capital', 'country_demonym', 
         'total_area', 'population', 'idd_code', 'currency_code', 'currency_name', 

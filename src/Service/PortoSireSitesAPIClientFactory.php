@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of PSFrameworkClientFactory
+ * Description of PortSpireSitesAPIClientFactory
  * 
  * PHP version 7
  * 
@@ -25,7 +25,7 @@
  * * * End License * * * 
  * 
  * @category  Service
- * @package   PSFrameworkClient
+ * @package   PortoSpireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -33,16 +33,16 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient 
  */
 
-namespace PortoSpire\PSFrameworkClient\Service;
+namespace PortoSpire\PortoSpireSitesAPIClient\Service;
 
 use Psr\Container\ContainerInterface;
 use Psr\Log\NullLogger;
 
 /**
- * Description of PSFrameworkClient
+ * Description of PortoSpireSitesAPIClientFactory
  *
  * @category  Service
- * @package   PSFrameworkClient
+ * @package   PortoSpireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -50,8 +50,8 @@ use Psr\Log\NullLogger;
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class PSFrameworkClientFactory {
-    public function __invoke(ContainerInterface $container) : PSFrameworkClient
+class PortoSpireSitesAPIClientFactory {
+    public function __invoke(ContainerInterface $container) : PortoSireSitesAPIClient
     {
         $logger = null;
         if($container->has('Logger')){

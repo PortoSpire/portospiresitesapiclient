@@ -31,7 +31,7 @@ as be available as a stand alone library.
 Add the ConfigProvider class to the config aggregator (typically found in config/config.php)
 > $aggregator = new ConfigAggregator([
 > ...
-> \PortoSpire\PSFrameworkClient\ConfigProvider::class,
+> \PortoSpire\PortoSpireSitesAPIClient\ConfigProvider::class,
 > ...
 Then use the client in your handlers/middleware as needed for your use cases.
 

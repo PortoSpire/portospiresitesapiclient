@@ -32,8 +32,9 @@
  * @version   GIT: $ID$
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
-use PortoSpire\PSFrameworkClient\Service\PSFrameworkClient;
-use PortoSpire\PSFrameworkClient\Service\PSFrameworkClientFactory;
+
+use PortoSpire\PortoSpireSitesAPIClient\Service\PortoSireSitesAPIClient;
+use PortoSpire\PortoSpireSitesAPIClient\Service\PortoSpireSitesAPIClientFactory;
 
 /*
  * Returns module configuration for Laminas Expressive and Laminas MVC
@@ -41,7 +42,7 @@ use PortoSpire\PSFrameworkClient\Service\PSFrameworkClientFactory;
 return [
     'service_manager' => [
         'factories' => [
-            PSFrameworkClient::class => PSFrameworkClientFactory::class,
+            PortoSireSitesAPIClient::class => PortoSpireSitesAPIClientFactory::class,
         ]
     ],
     'notification_manager' => [

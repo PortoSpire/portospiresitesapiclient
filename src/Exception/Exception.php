@@ -25,7 +25,7 @@
  * * * End License * * * 
  * 
  * @category  Exception
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3
@@ -33,7 +33,7 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient\Exception;
+namespace PortoSpire\PortoSireSitesAPIClient\Exception;
 
 use Throwable;
 
@@ -41,7 +41,7 @@ use Throwable;
  * Description of Exception
  *
  * @category  Exception
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3

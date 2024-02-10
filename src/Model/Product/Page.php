@@ -25,7 +25,7 @@
  * * * End License * * * 
  * 
  * @category  Model
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3
@@ -33,15 +33,15 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient\Model\Product;
+namespace PortoSpire\PortoSireSitesAPIClient\Model\Product;
 
-use PortoSpire\PSFrameworkClient\Model\Generic;
+use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Page
  *
  * @category  Model
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3

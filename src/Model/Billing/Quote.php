@@ -33,15 +33,15 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient 
  */
 
-namespace PortoSpire\PSFrameworkClient\Model\Billing;
+namespace PortoSpire\PortoSireSitesAPIClient\Model\Billing;
 
-use PortoSpire\PSFrameworkClient\Model\Generic;
+use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Quote
  *
  * @category  Model
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3

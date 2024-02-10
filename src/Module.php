@@ -25,7 +25,7 @@
  * * * End License * * * 
  * 
  * @category  Module
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -33,13 +33,13 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient;
+namespace PortoSpire\PortoSpireSitesAPIClient;
 
 /**
  * Description of Module
  *
  * @category  Module
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -47,9 +47,12 @@ namespace PortoSpire\PSFrameworkClient;
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class Module {
+class Module
+{
+
     const VERSION = "0.2.0";
- public function getConfig()
+
+    public function getConfig()
     {
         return include __DIR__ . '/../config/module.config.php';
     }

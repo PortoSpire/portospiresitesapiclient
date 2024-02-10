@@ -25,7 +25,7 @@
  * * * End License * * * 
  * 
  * @category  ConfigProvider
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -33,14 +33,15 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient;
+namespace PortoSpire\PortoSpireSitesAPIClient;
+
 /**
  * Description of ConfigProvider
  * 
  * The configuration provider for SuiteCRMClient for Zend Expressive
  *
  * @category  Config Provider
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    Andrew Wallace <andrew.wallace@portospire.com>
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -50,7 +51,7 @@ namespace PortoSpire\PSFrameworkClient;
  */
 class ConfigProvider
 {
-    
+
     /**
      * Returns the configuration array
      */
@@ -69,7 +70,7 @@ class ConfigProvider
     {
         return [
             'factories' => [
-                Service\PSFrameworkClient::class => Service\PSFrameworkClientFactory::class,
+                Service\PortoSpireSitesAPIClient::class => Service\PortoSpireSitesAPIClientFactory::class,
             ],
         ];
     }
@@ -84,5 +85,4 @@ class ConfigProvider
             ],
         ];
     }
-
 }

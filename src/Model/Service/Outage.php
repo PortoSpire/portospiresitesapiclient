@@ -25,7 +25,7 @@
  * * * End License * * * 
  * 
  * @category  Model
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3
@@ -35,13 +35,13 @@
 
 namespace PortoSpire\PSFrameworkClient\Model\Service;
 
-use PortoSpire\PSFrameworkClient\Model\Generic;
+use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Outage
  *
  * @category  Model
- * @package   PSFrameworkClient
+ * @package   PortoSireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3

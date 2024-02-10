@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of PSFrameworkClient
+ * Description of PortoSireSitesAPIClient
  * 
  * PHP version 7
  * 
@@ -33,7 +33,7 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient\Service;
+namespace PortoSpire\PortoSpireSitesAPIClient\Service;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
@@ -46,7 +46,7 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
 use Psr\Log\LoggerInterface;
 
 /**
- * Description of PSFrameworkClient
+ * Description of PortoSireSitesAPIClient
  *
  * @category  Service
  * @package   PSFrameworkClient
@@ -57,7 +57,7 @@ use Psr\Log\LoggerInterface;
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class PSFrameworkClient {
+class PortoSireSitesAPIClient {
 
     const _api_version = '1',
             _access_url = '/oauth',

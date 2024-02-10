@@ -24,28 +24,33 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2024 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary, Confidential
+ * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient 
  */
+
+namespace PortoSpire\PSFrameworkClient\Model\Locale;
+
+use PortoSpire\PSFrameworkClient\Model\Generic;
 
 /**
  * Description of Region
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2024 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary
+ * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class Region extends PortoSpire\PSFrameworkClient\Model\Generic{
+class Region extends Generic {
+
     public function __construct($attributes = ['country_code', 'subdivision_name', 'code']) {
         parent::__construct($attributes);
     }

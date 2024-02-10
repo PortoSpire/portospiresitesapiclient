@@ -24,21 +24,24 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Config
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
+use PortoSpire\PSFrameworkClient\Service\PSFrameworkClient;
+use PortoSpire\PSFrameworkClient\Service\PSFrameworkClientFactory;
+
 /*
  * Returns module configuration for Laminas Expressive and Laminas MVC
  */
 return [
     'service_manager' => [
         'factories' => [
-            PortoSpire\PSFrameworkClient\Service\PSFrameworkClient::class => PortoSpire\PSFrameworkClient\Service\PSFrameworkClientFactory::class,
+            PSFrameworkClient::class => PSFrameworkClientFactory::class,
         ]
     ],
     'notification_manager' => [

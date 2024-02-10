@@ -24,29 +24,31 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Exception
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary, Confidential
+ * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
 namespace PortoSpire\PSFrameworkClient\Exception;
 
+use Throwable;
+
 /**
  * Description of Exception
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Exception
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
- * @license   https://portospire.com/policies Proprietary
+ * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-interface Exception extends \Throwable{
+interface Exception extends Throwable{
     
 }

@@ -24,13 +24,13 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
 namespace PortoSpire\PSFrameworkClient\Model\Service;
@@ -40,13 +40,13 @@ use PortoSpire\PSFrameworkClient\Model\Generic;
 /**
  * Description of Outage
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Model
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2022 PORTOSPIRE
  * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
 class Outage extends Generic {

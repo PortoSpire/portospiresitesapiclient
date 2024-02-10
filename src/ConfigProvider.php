@@ -24,13 +24,13 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  ConfigProvider
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
 namespace PortoSpire\PSFrameworkClient;
@@ -45,7 +45,7 @@ namespace PortoSpire\PSFrameworkClient;
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.1
  */
 class ConfigProvider

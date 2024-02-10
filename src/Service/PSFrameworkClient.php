@@ -24,13 +24,13 @@
  * MA 02110-1301  USA
  * * * End License * * * 
  * 
- * @category  CategoryName
- * @package   PackageName
+ * @category  Service
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   GIT: $ID$
- * @link      https://portospire.com 
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
 namespace PortoSpire\PSFrameworkClient\Service;
@@ -48,18 +48,19 @@ use Psr\Log\LoggerInterface;
 /**
  * Description of PSFrameworkClient
  *
- * @category  CategoryName
- * @package   PackageName
+ * @category  Service
+ * @package   PSFrameworkClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
  * @version   Release: @package_version@
- * @link      https://coderepo.portospire.com/#git_repo_name
+ * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
 class PSFrameworkClient {
 
-    const _access_url = '/oauth',
+    const _api_version = '1',
+            _access_url = '/oauth',
             _rest_url = '/',
             _modes = ['GET' => 'get', 'POST' => 'post', 'PUT' => 'put', 'PATCH' => 'patch', 'DELETE' => 'delete'];
 

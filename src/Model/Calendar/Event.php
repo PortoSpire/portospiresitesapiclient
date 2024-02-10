@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Description of Module
+ * Description of Event
  * 
- * PHP version 7
+ * PHP version 8
  * 
  * * * License * * * 
- * Copyright (C) 2021 PortoSpire, LLC.
+ * Copyright (C) 2024 PORTOSPIRE, All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -27,30 +27,35 @@
  * @category  CategoryName
  * @package   PackageName
  * @author    andrewwallace
- * @copyright 2021 PORTOSPIRE
- * @license   LGPL 3
+ * @copyright 2024 PORTOSPIRE
+ * @license   https://portospire.com/policies Proprietary, Confidential
  * @version   GIT: $ID$
  * @link      https://portospire.com 
  */
 
-namespace PortoSpire\PSFrameworkClient;
+namespace PortoSpire\PSFrameworkClient\Model\Calendar;
 
 /**
- * Description of Module
+ * Description of Event
  *
  * @category  CategoryName
  * @package   PackageName
  * @author    andrewwallace
- * @copyright 2021 PORTOSPIRE
- * @license   LGPL 3
+ * @copyright 2024 PORTOSPIRE
+ * @license   https://portospire.com/policies Proprietary
  * @version   Release: @package_version@
  * @link      https://coderepo.portospire.com/#git_repo_name
  * @since     Class available since Release 0.0.0
  */
-class Module {
-    const VERSION = "0.2.0";
- public function getConfig()
-    {
-        return include __DIR__ . '/../config/module.config.php';
+class Event extends \PortoSpire\PSFrameworkClient\Model\Generic{
+    public function __construct($attributes = ['event_id', 'calendar_id', 'name', 'description', 'active', 'submission_id', 
+            'eventtype_id', 'start_date', 'end_date', 'start_time', 'end_time', 'is_full_day', 
+            'parent_event_id', 'is_public','is_recurring', 'image',
+            'recurring_type_id', 'max_num_of_occurances', 'separation_count', 
+            'day_of_week', 'day_of_month', 'month_of_year', 'synced', 'hide_start_date',
+            'hide_end_date', 'capacity', 'sold', 'currency', 'minimum_price', 'maximum_price',
+            'external_url', 'external_id','location_id', 'external_source']) {
+        parent::__construct($attributes);
+        $this->type = 'calendar.event:updated';
     }
 }

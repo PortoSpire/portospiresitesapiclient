@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Description of Module
+ * Description of Country
  * 
- * PHP version 7
+ * PHP version 8
  * 
  * * * License * * * 
- * Copyright (C) 2021 PortoSpire, LLC.
+ * Copyright (C) 2024 PORTOSPIRE, All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -27,30 +27,29 @@
  * @category  CategoryName
  * @package   PackageName
  * @author    andrewwallace
- * @copyright 2021 PORTOSPIRE
- * @license   LGPL 3
+ * @copyright 2024 PORTOSPIRE
+ * @license   https://portospire.com/policies Proprietary, Confidential
  * @version   GIT: $ID$
  * @link      https://portospire.com 
  */
 
-namespace PortoSpire\PSFrameworkClient;
-
 /**
- * Description of Module
+ * Description of Country
  *
  * @category  CategoryName
  * @package   PackageName
  * @author    andrewwallace
- * @copyright 2021 PORTOSPIRE
- * @license   LGPL 3
+ * @copyright 2024 PORTOSPIRE
+ * @license   https://portospire.com/policies Proprietary
  * @version   Release: @package_version@
  * @link      https://coderepo.portospire.com/#git_repo_name
  * @since     Class available since Release 0.0.0
  */
-class Module {
-    const VERSION = "0.2.0";
- public function getConfig()
-    {
-        return include __DIR__ . '/../config/module.config.php';
+class Country Extends PortoSpire\PSFrameworkClient\Model\Generic {
+    public function __construct($attributes = ['country_code', 'country_name', 
+        'country_alpha3_code', 'country_numeric_code', 'capital', 'country_demonym', 
+        'total_area', 'population', 'idd_code', 'currency_code', 'currency_name', 
+        'currency_symbol', 'lang_code', 'lang_name', 'cctld']) {
+        parent::__construct($attributes);
     }
 }

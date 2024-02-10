@@ -1,0 +1,5896 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Api",
+        "version": "1"
+    },
+    "tags": [
+        {
+            "name": "calendars"
+        },
+        {
+            "name": "domain"
+        },
+        {
+            "name": "events"
+        },
+        {
+            "name": "eventtypes"
+        },
+        {
+            "name": "feature"
+        },
+        {
+            "name": "files"
+        },
+        {
+            "name": "formelements"
+        },
+        {
+            "name": "forms"
+        },
+        {
+            "name": "formsubmission"
+        },
+        {
+            "name": "images"
+        },
+        {
+            "name": "location_categories"
+        },
+        {
+            "name": "locations"
+        },
+        {
+            "name": "menu_items"
+        },
+        {
+            "name": "menus"
+        },
+        {
+            "name": "occasio_categories"
+        },
+        {
+            "name": "pages"
+        },
+        {
+            "name": "profiles"
+        },
+        {
+            "name": "recurring_types"
+        },
+        {
+            "name": "redirection"
+        },
+        {
+            "name": "site"
+        },
+        {
+            "name": "templates"
+        },
+        {
+            "name": "user_email"
+        },
+        {
+            "name": "user_sites"
+        },
+        {
+            "name": "users"
+        },
+        {
+            "name": "HybridAuth"
+        }
+    ],
+    "paths": {
+        "\/calendars\/site\/:site_id": {
+            "get": {
+                "tags": [
+                    "calendars"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/calendars\/site\/:site_id\/{calendars_id}": {
+            "get": {
+                "tags": [
+                    "calendars"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "calendars_id",
+                        "description": "URL parameter calendars_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "calendars"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "calendars_id",
+                        "description": "URL parameter calendars_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/calendars"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "calendars"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "calendars_id",
+                        "description": "URL parameter calendars_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/calendars"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "calendars"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "calendars_id",
+                        "description": "URL parameter calendars_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/domain": {
+            "get": {
+                "tags": [
+                    "domain"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/domain\/{domain_id}": {
+            "get": {
+                "tags": [
+                    "domain"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "domain_id",
+                        "description": "URL parameter domain_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "domain"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "domain_id",
+                        "description": "URL parameter domain_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/domain"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "domain"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "domain_id",
+                        "description": "URL parameter domain_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/domain"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "domain"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "domain_id",
+                        "description": "URL parameter domain_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/events\/calendar\/:calendar_id": {
+            "get": {
+                "tags": [
+                    "events"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/events\/calendar\/:calendar_id\/{events_id}": {
+            "get": {
+                "tags": [
+                    "events"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "events_id",
+                        "description": "URL parameter events_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "events"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "events_id",
+                        "description": "URL parameter events_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/events"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "events"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "events_id",
+                        "description": "URL parameter events_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/events"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "events"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "events_id",
+                        "description": "URL parameter events_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/eventtypes": {
+            "get": {
+                "tags": [
+                    "eventtypes"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/eventtypes\/{eventtypes_id}": {
+            "get": {
+                "tags": [
+                    "eventtypes"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "eventtypes_id",
+                        "description": "URL parameter eventtypes_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "eventtypes"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "eventtypes_id",
+                        "description": "URL parameter eventtypes_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/eventtypes"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "eventtypes"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "eventtypes_id",
+                        "description": "URL parameter eventtypes_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/eventtypes"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "eventtypes"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "eventtypes_id",
+                        "description": "URL parameter eventtypes_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/feature": {
+            "get": {
+                "tags": [
+                    "feature"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/feature\/{feature_id}": {
+            "get": {
+                "tags": [
+                    "feature"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "feature_id",
+                        "description": "URL parameter feature_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "feature"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "feature_id",
+                        "description": "URL parameter feature_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/feature"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "feature"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "feature_id",
+                        "description": "URL parameter feature_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/feature"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "feature"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "feature_id",
+                        "description": "URL parameter feature_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/files": {
+            "get": {
+                "tags": [
+                    "files"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "files"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/files"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/files\/{files_id}": {
+            "get": {
+                "tags": [
+                    "files"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "files_id",
+                        "description": "URL parameter files_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "files"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "files_id",
+                        "description": "URL parameter files_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/files"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "files"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "files_id",
+                        "description": "URL parameter files_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/files"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "files"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "files_id",
+                        "description": "URL parameter files_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/formelements": {
+            "get": {
+                "tags": [
+                    "formelements"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/formelements\/{formelements_id}": {
+            "get": {
+                "tags": [
+                    "formelements"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "formelements_id",
+                        "description": "URL parameter formelements_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "formelements"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "formelements_id",
+                        "description": "URL parameter formelements_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/formelements"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "formelements"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "formelements_id",
+                        "description": "URL parameter formelements_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/formelements"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "formelements"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "formelements_id",
+                        "description": "URL parameter formelements_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/forms": {
+            "get": {
+                "tags": [
+                    "forms"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/forms\/{forms_id}": {
+            "get": {
+                "tags": [
+                    "forms"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "forms_id",
+                        "description": "URL parameter forms_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "forms"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "forms_id",
+                        "description": "URL parameter forms_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/forms"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "forms"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "forms_id",
+                        "description": "URL parameter forms_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/forms"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "forms"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "forms_id",
+                        "description": "URL parameter forms_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/formsubmission": {
+            "get": {
+                "tags": [
+                    "formsubmission"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/formsubmission\/{formsubmission_id}": {
+            "get": {
+                "tags": [
+                    "formsubmission"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "formsubmission_id",
+                        "description": "URL parameter formsubmission_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "formsubmission"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "formsubmission_id",
+                        "description": "URL parameter formsubmission_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/formsubmission"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "formsubmission"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "formsubmission_id",
+                        "description": "URL parameter formsubmission_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/formsubmission"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "formsubmission"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "formsubmission_id",
+                        "description": "URL parameter formsubmission_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/images": {
+            "get": {
+                "tags": [
+                    "images"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "images"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/images"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/images\/{images_id}": {
+            "get": {
+                "tags": [
+                    "images"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "images_id",
+                        "description": "URL parameter images_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "images"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "images_id",
+                        "description": "URL parameter images_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/images"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "images"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "images_id",
+                        "description": "URL parameter images_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/images"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "images"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "images_id",
+                        "description": "URL parameter images_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/location_categories": {
+            "get": {
+                "tags": [
+                    "location_categories"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/location_categories\/{location_categories_id}": {
+            "get": {
+                "tags": [
+                    "location_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "location_categories_id",
+                        "description": "URL parameter location_categories_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "location_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "location_categories_id",
+                        "description": "URL parameter location_categories_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/location_categories"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "location_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "location_categories_id",
+                        "description": "URL parameter location_categories_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/location_categories"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "location_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "location_categories_id",
+                        "description": "URL parameter location_categories_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "location_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "location_categories_id",
+                        "description": "URL parameter location_categories_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/location_categories"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/locations\/site\/:site_id": {
+            "get": {
+                "tags": [
+                    "locations"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/locations\/site\/:site_id\/{locations_id}": {
+            "get": {
+                "tags": [
+                    "locations"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "locations_id",
+                        "description": "URL parameter locations_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "locations"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "locations_id",
+                        "description": "URL parameter locations_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/locations"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "locations"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "locations_id",
+                        "description": "URL parameter locations_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/locations"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "locations"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "locations_id",
+                        "description": "URL parameter locations_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/menu_items": {
+            "get": {
+                "tags": [
+                    "menu_items"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/menu_items\/{menu_items_id}": {
+            "get": {
+                "tags": [
+                    "menu_items"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "menu_items_id",
+                        "description": "URL parameter menu_items_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "menu_items"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "menu_items_id",
+                        "description": "URL parameter menu_items_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/menu_items"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "menu_items"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "menu_items_id",
+                        "description": "URL parameter menu_items_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/menu_items"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "menu_items"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "menu_items_id",
+                        "description": "URL parameter menu_items_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/menus": {
+            "get": {
+                "tags": [
+                    "menus"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/menus\/{menus_id}": {
+            "get": {
+                "tags": [
+                    "menus"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "menus_id",
+                        "description": "URL parameter menus_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "menus"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "menus_id",
+                        "description": "URL parameter menus_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/menus"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "menus"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "menus_id",
+                        "description": "URL parameter menus_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/menus"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "menus"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "menus_id",
+                        "description": "URL parameter menus_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/occasio_categories\/site\/:site_id": {
+            "get": {
+                "tags": [
+                    "occasio_categories"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/occasio_categories\/site\/:site_id\/{occasio_categories_id}": {
+            "get": {
+                "tags": [
+                    "occasio_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "occasio_categories_id",
+                        "description": "URL parameter occasio_categories_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "occasio_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "occasio_categories_id",
+                        "description": "URL parameter occasio_categories_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/occasio_categories"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "occasio_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "occasio_categories_id",
+                        "description": "URL parameter occasio_categories_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/occasio_categories"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "occasio_categories"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "occasio_categories_id",
+                        "description": "URL parameter occasio_categories_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/pages": {
+            "get": {
+                "tags": [
+                    "pages"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/pages\/{pages_id}": {
+            "get": {
+                "tags": [
+                    "pages"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "pages_id",
+                        "description": "URL parameter pages_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "pages"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "pages_id",
+                        "description": "URL parameter pages_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/pages"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pages"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "pages_id",
+                        "description": "URL parameter pages_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/pages"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pages"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "pages_id",
+                        "description": "URL parameter pages_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/profiles\/{profiles_id}": {
+            "get": {
+                "tags": [
+                    "profiles"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "profiles_id",
+                        "description": "URL parameter profiles_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "profiles"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "profiles_id",
+                        "description": "URL parameter profiles_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/profiles"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/recurring_types": {
+            "get": {
+                "tags": [
+                    "recurring_types"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/recurring_types\/{recurring_types_id}": {
+            "get": {
+                "tags": [
+                    "recurring_types"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "recurring_types_id",
+                        "description": "URL parameter recurring_types_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "recurring_types"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "recurring_types_id",
+                        "description": "URL parameter recurring_types_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/recurring_types"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "recurring_types"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "recurring_types_id",
+                        "description": "URL parameter recurring_types_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/recurring_types"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "recurring_types"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "recurring_types_id",
+                        "description": "URL parameter recurring_types_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/redirection": {
+            "get": {
+                "tags": [
+                    "redirection"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/redirection\/{redirection_id}": {
+            "get": {
+                "tags": [
+                    "redirection"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "redirection_id",
+                        "description": "URL parameter redirection_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "redirection"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "redirection_id",
+                        "description": "URL parameter redirection_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/redirection"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "redirection"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "redirection_id",
+                        "description": "URL parameter redirection_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/redirection"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "redirection"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "redirection_id",
+                        "description": "URL parameter redirection_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/site": {
+            "get": {
+                "tags": [
+                    "site"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/site\/{site_id}": {
+            "get": {
+                "tags": [
+                    "site"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "site_id",
+                        "description": "URL parameter site_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "site"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "site_id",
+                        "description": "URL parameter site_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/site"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "site"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "site_id",
+                        "description": "URL parameter site_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/site"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "site"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "site_id",
+                        "description": "URL parameter site_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/templates": {
+            "get": {
+                "tags": [
+                    "templates"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/templates\/{templates_id}": {
+            "get": {
+                "tags": [
+                    "templates"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "templates_id",
+                        "description": "URL parameter templates_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "templates"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "templates_id",
+                        "description": "URL parameter templates_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/templates"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "templates"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "templates_id",
+                        "description": "URL parameter templates_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/templates"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "templates"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "templates_id",
+                        "description": "URL parameter templates_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/user_email\/{uid}": {
+            "get": {
+                "tags": [
+                    "user_email"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "user_email"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/user_email"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "user_email"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/user_email"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "user_email"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/user_sites\/{user_id}": {
+            "get": {
+                "tags": [
+                    "user_sites"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "user_id",
+                        "description": "URL parameter user_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/users": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/users\/{users_id}": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "users_id",
+                        "description": "URL parameter users_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "users"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "users_id",
+                        "description": "URL parameter users_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "users"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "users_id",
+                        "description": "URL parameter users_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/users"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "users_id",
+                        "description": "URL parameter users_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/users"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/hybridauth\/{action}": {
+            "get": {
+                "tags": [
+                    "HybridAuth"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "action",
+                        "description": "URL parameter action",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/json",
+                    "application\/*+json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "calendars": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "template_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "site_id",
+                "name",
+                "active"
+            ]
+        },
+        "domain": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "uri": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "reg_expires": {
+                    "type": "string"
+                },
+                "reg_updated": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "site_id",
+                "uri",
+                "active"
+            ]
+        },
+        "events": {
+            "type": "object",
+            "properties": {
+                "calendar_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "submission_id": {
+                    "type": "string"
+                },
+                "eventtype_id": {
+                    "type": "string"
+                },
+                "start_date": {
+                    "type": "string"
+                },
+                "end_date": {
+                    "type": "string"
+                },
+                "start_time": {
+                    "type": "string"
+                },
+                "end_time": {
+                    "type": "string"
+                },
+                "is_full_day": {
+                    "type": "string"
+                },
+                "parent_event_id": {
+                    "type": "string"
+                },
+                "is_public": {
+                    "type": "string"
+                },
+                "is_recurring": {
+                    "type": "string"
+                },
+                "synced": {
+                    "type": "string"
+                },
+                "hide_start_date": {
+                    "type": "string"
+                },
+                "hide_end_date": {
+                    "type": "string"
+                },
+                "capacity": {
+                    "type": "string"
+                },
+                "sold": {
+                    "type": "string"
+                },
+                "external_url": {
+                    "type": "string"
+                },
+                "currency": {
+                    "type": "string"
+                },
+                "minimum_price": {
+                    "type": "string"
+                },
+                "maximum_price": {
+                    "type": "string"
+                },
+                "external_id": {
+                    "type": "string"
+                },
+                "external_source": {
+                    "type": "string"
+                },
+                "location_id": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "calendar_id",
+                "name",
+                "description",
+                "active",
+                "start_date",
+                "is_full_day",
+                "is_public",
+                "is_recurring"
+            ]
+        },
+        "eventtypes": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "form_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "description",
+                "active"
+            ]
+        },
+        "feature": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "available": {
+                    "type": "string"
+                },
+                "setupcosts": {
+                    "type": "string"
+                },
+                "maintenancecosts": {
+                    "type": "string"
+                },
+                "product_code": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "description",
+                "available"
+            ]
+        },
+        "files": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "filename": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "fileType": {
+                    "type": "string"
+                },
+                "filesize": {
+                    "type": "string"
+                },
+                "access": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "site_id",
+                "description",
+                "filename",
+                "username",
+                "fileType",
+                "filesize",
+                "access"
+            ]
+        },
+        "formelements": {
+            "type": "object",
+            "properties": {
+                "form_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "config": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "form_id",
+                "name",
+                "display_name",
+                "description",
+                "type",
+                "config"
+            ]
+        },
+        "forms": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "redirect_to": {
+                    "type": "string"
+                },
+                "cached_elements": {
+                    "type": "string"
+                },
+                "template": {
+                    "type": "string"
+                },
+                "email_notification": {
+                    "type": "string"
+                },
+                "email_template": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "site_id",
+                "name",
+                "description",
+                "active"
+            ]
+        },
+        "formsubmission": {
+            "type": "object",
+            "properties": {
+                "form_id": {
+                    "type": "string"
+                },
+                "submitted_dtm": {
+                    "type": "string"
+                },
+                "detail": {
+                    "type": "string"
+                },
+                "submitted_state": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "form_id",
+                "submitted_dtm",
+                "detail",
+                "submitted_state"
+            ]
+        },
+        "images": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "alt": {
+                    "type": "string"
+                },
+                "filename": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "imageType": {
+                    "type": "string"
+                },
+                "imageSize": {
+                    "type": "string"
+                },
+                "filesize": {
+                    "type": "string"
+                },
+                "altID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "site_id",
+                "alt",
+                "filename",
+                "username",
+                "imageType",
+                "imageSize"
+            ]
+        },
+        "location_categories": {
+            "type": "object",
+            "properties": {
+                "category_id": {
+                    "type": "string"
+                },
+                "location_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "category_id",
+                "location_id"
+            ]
+        },
+        "locations": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "point": {
+                    "type": "string"
+                },
+                "street": {
+                    "type": "string"
+                },
+                "street2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "region": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "external_id": {
+                    "type": "string"
+                },
+                "synced": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "site_id",
+                "name",
+                "description",
+                "active",
+                "created",
+                "updated",
+                "point"
+            ]
+        },
+        "menu_items": {
+            "type": "object",
+            "properties": {
+                "menu_id": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "page_id": {
+                    "type": "string"
+                },
+                "link": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "parent_id": {
+                    "type": "string"
+                },
+                "resource": {
+                    "type": "string"
+                },
+                "privilege": {
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                }
+            }
+        },
+        "menus": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "access_level": {
+                    "type": "string"
+                },
+                "parent_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "site_id"
+            ]
+        },
+        "occasio_categories": {
+            "type": "object",
+            "properties": {
+                "uid": {
+                    "type": "string"
+                },
+                "site_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "uid",
+                "site_id",
+                "name"
+            ]
+        },
+        "pages": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "parent_id": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "date_created": {
+                    "type": "string"
+                },
+                "creator": {
+                    "type": "string"
+                },
+                "editor": {
+                    "type": "string"
+                },
+                "approver": {
+                    "type": "string"
+                },
+                "last_update": {
+                    "type": "string"
+                },
+                "headline": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "featureExpires": {
+                    "type": "string"
+                },
+                "articleExpires": {
+                    "type": "string"
+                },
+                "approvedDate": {
+                    "type": "string"
+                },
+                "social_share": {
+                    "type": "string"
+                },
+                "forced_keywords": {
+                    "type": "string"
+                },
+                "containerbreakout": {
+                    "type": "string"
+                },
+                "author": {
+                    "type": "string"
+                },
+                "template": {
+                    "type": "string"
+                },
+                "include_sitemap": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "site_id",
+                "last_update",
+                "social_share",
+                "include_sitemap"
+            ]
+        },
+        "profiles": {
+            "type": "object",
+            "properties": {
+                "firstname": {
+                    "type": "string"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "street": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "gender": {
+                    "type": "string"
+                },
+                "birthday": {
+                    "type": "string"
+                },
+                "phone_number": {
+                    "type": "string"
+                },
+                "website": {
+                    "type": "string"
+                },
+                "language": {
+                    "type": "string"
+                },
+                "zoneinfo": {
+                    "type": "string"
+                },
+                "picture": {
+                    "type": "string"
+                },
+                "email_verified": {
+                    "type": "string"
+                },
+                "phone_verified": {
+                    "type": "string"
+                },
+                "about": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "recurring_types": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "redirection": {
+            "type": "object",
+            "properties": {
+                "site_id": {
+                    "type": "string"
+                },
+                "redirect_from": {
+                    "type": "string"
+                },
+                "redirect_to": {
+                    "type": "string"
+                },
+                "active_date": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "redirect_from",
+                "redirect_to"
+            ]
+        },
+        "site": {
+            "type": "object",
+            "properties": {
+                "sitename": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "expiration": {
+                    "type": "string"
+                },
+                "hash": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "sitename",
+                "active"
+            ]
+        },
+        "templates": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string"
+                },
+                "last_modified": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "source"
+            ]
+        },
+        "user_email": {
+            "type": "object",
+            "properties": {
+                "userID": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "is_verified": {
+                    "type": "string"
+                },
+                "is_primary": {
+                    "type": "string"
+                },
+                "nonce": {
+                    "type": "string"
+                },
+                "created_dtm": {
+                    "type": "string"
+                },
+                "updated_dtm": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "userID",
+                "email",
+                "is_verified",
+                "is_primary",
+                "created_dtm",
+                "updated_dtm"
+            ]
+        },
+        "users": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "online": {
+                    "type": "string"
+                },
+                "lastClick": {
+                    "type": "string"
+                },
+                "sessID": {
+                    "type": "string"
+                },
+                "lastLogin": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "tos_accept": {
+                    "type": "string"
+                },
+                "internal_id": {
+                    "type": "string",
+                    "description": "The internal ID mapping the user across services"
+                }
+            },
+            "required": [
+                "username",
+                "online",
+                "lastClick",
+                "active",
+                "tos_accept"
+            ]
+        }
+    }
+}

@@ -35,6 +35,7 @@ Add the ConfigProvider class to the config aggregator (typically found in config
 > ...
 Then use the client in your handlers/middleware as needed for your use cases.
 
+
 ### <a name="laminasmvc" href="#laminasmvc">Laminas MVC</a>
 There should be no additional steps beyond adding to your project's composer.json required to begin using the library with Laminas MVC.
 

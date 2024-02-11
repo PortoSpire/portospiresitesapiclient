@@ -70,7 +70,7 @@ class ConfigProvider
     {
         return [
             'factories' => [
-                Service\PortoSpireSitesAPIClient::class => Service\PortoSpireSitesAPIClientFactory::class,
+                Service\PortoSireSitesAPIClient::class => Service\PortoSpireSitesAPIClientFactory::class,
             ],
         ];
     }

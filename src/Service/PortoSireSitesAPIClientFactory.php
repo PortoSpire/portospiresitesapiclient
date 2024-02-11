@@ -51,7 +51,7 @@ use Psr\Log\NullLogger;
  * @since     Class available since Release 0.0.0
  */
 class PortoSpireSitesAPIClientFactory {
-    public function __invoke(ContainerInterface $container) : PortoSireSitesAPIClient
+    public function __invoke(ContainerInterface $container) : PortoSpireSitesAPIClient
     {
         $logger = null;
         if($container->has('Logger')){

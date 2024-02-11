@@ -57,7 +57,7 @@ use Psr\Log\LoggerInterface;
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class PortoSireSitesAPIClient {
+class PortoSpireSitesAPIClient {
 
     const _api_version = '1',
             _access_url = '/oauth',

@@ -35,6 +35,9 @@
 
 namespace PortoSpire\PortoSpireSitesAPIClient;
 
+use PortoSpire\PortoSpireSitesAPIClient\Service\PortoSpireSitesAPIClient;
+use PortoSpire\PortoSpireSitesAPIClient\Service\PortoSpireSitesAPIClientFactory;
+
 /**
  * Description of ConfigProvider
  * 
@@ -70,7 +73,7 @@ class ConfigProvider
     {
         return [
             'factories' => [
-                Service\PortoSireSitesAPIClient::class => Service\PortoSpireSitesAPIClientFactory::class,
+                PortoSpireSitesAPIClient::class => PortoSpireSitesAPIClientFactory::class,
             ],
         ];
     }

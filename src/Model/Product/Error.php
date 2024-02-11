@@ -33,9 +33,9 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient 
  */
 
-namespace PortoSpire\PortoSireSitesAPIClient\Model\Product;
+namespace PortoSpire\PortoSpireSitesAPIClient\Model\Product;
 
-use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
+use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Error

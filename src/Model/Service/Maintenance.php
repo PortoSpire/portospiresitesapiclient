@@ -33,9 +33,9 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PSFrameworkClient\Model\Service;
+namespace PortoSpire\PortoSpireSitesAPIClient\Model\Service;
 
-use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
+use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Maintenance

@@ -59,6 +59,6 @@ class PortoSpireSitesAPIClientFactory {
         } else {
             $logger = new NullLogger();
         }
-        return new PSFrameworkClient($logger);
+        return new PortoSireSitesAPIClient($logger);
     }
 }

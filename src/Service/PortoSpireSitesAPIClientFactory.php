@@ -59,6 +59,6 @@ class PortoSpireSitesAPIClientFactory {
         } else {
             $logger = new NullLogger();
         }
-        return new PortoSireSitesAPIClient($logger);
+        return new PortoSpireSitesAPIClient($logger);
     }
 }

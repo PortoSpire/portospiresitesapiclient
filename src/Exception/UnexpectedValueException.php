@@ -33,7 +33,7 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient 
  */
 
-namespace PortoSpire\PortoSireSitesAPIClient\Exception;
+namespace PortoSpire\PortoSpireSitesAPIClient\Exception;
 
 /**
  * Description of UnexpectedValueException

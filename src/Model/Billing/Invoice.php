@@ -33,9 +33,9 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient 
  */
 
-namespace PortoSpire\PortoSireSitesAPIClient\Model\Billing;
+namespace PortoSpire\PortoSpireSitesAPIClient\Model\Billing;
 
-use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
+use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Invoice

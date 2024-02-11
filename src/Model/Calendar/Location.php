@@ -33,9 +33,9 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PortoSireSitesAPIClient\Model\Calendar;
+namespace PortoSpire\PortoSpireSitesAPIClient\Model\Calendar;
 
-use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
+use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Location

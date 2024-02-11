@@ -33,9 +33,9 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-namespace PortoSpire\PortoSireSitesAPIClient\Model\Security;
+namespace PortoSpire\PortoSpireSitesAPIClient\Model\Security;
 
-use PortoSpire\PortoSireSitesAPIClient\Model\Generic;
+use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 
 /**
  * Description of Invalidlogin

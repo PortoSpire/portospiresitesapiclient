@@ -33,7 +33,7 @@
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  */
 
-use PortoSpire\PortoSpireSitesAPIClient\Service\PortoSireSitesAPIClient;
+use PortoSpire\PortoSpireSitesAPIClient\Service\PortoSpireSitesAPIClient;
 use PortoSpire\PortoSpireSitesAPIClient\Service\PortoSpireSitesAPIClientFactory;
 
 /*
@@ -42,7 +42,7 @@ use PortoSpire\PortoSpireSitesAPIClient\Service\PortoSpireSitesAPIClientFactory;
 return [
     'service_manager' => [
         'factories' => [
-            PortoSireSitesAPIClient::class => PortoSpireSitesAPIClientFactory::class,
+        PortoSpireSitesAPIClient::class => PortoSpireSitesAPIClientFactory::class,
         ]
     ],
     'notification_manager' => [

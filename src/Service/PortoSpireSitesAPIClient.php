@@ -40,9 +40,9 @@ use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\Request;
-use PortoSpire\PSFrameworkClient\Exception\SignatureVerificationException;
-use PortoSpire\PSFrameworkClient\Exception\UnexpectedValueException;
-use PortoSpire\PSFrameworkClient\Model\Generic;
+use PortoSpire\PortoSpireSitesAPIClient\Exception\SignatureVerificationException;
+use PortoSpire\PortoSpireSitesAPIClient\Exception\UnexpectedValueException;
+use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -57,7 +57,7 @@ use Psr\Log\LoggerInterface;
  * @link      https://github.com/PortoSpire/portospiresitesapiclient
  * @since     Class available since Release 0.0.0
  */
-class PortoSireSitesAPIClient {
+class PortoSpireSitesAPIClient {
 
     const _api_version = '1',
             _access_url = '/oauth',

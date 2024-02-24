@@ -25,7 +25,7 @@
  * * * End License * * * 
  * 
  * @category  ConfigProvider
- * @package   PortoSireSitesAPIClient
+ * @package   PortoSpireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -40,8 +40,8 @@ namespace PortoSpire\PortoSpireSitesAPIClient;
  * 
  * The configuration provider for SuiteCRMClient for Zend Expressive
  *
- * @category  Config Provider
- * @package   PortoSireSitesAPIClient
+ * @category  ConfigProvider
+ * @package   PortoSpireSitesAPIClient
  * @author    Andrew Wallace <andrew.wallace@portospire.com>
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3

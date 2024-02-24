@@ -25,7 +25,7 @@
  * * * End License * * * 
  * 
  * @category  Module
- * @package   PortoSireSitesAPIClient
+ * @package   PortoSpireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -39,7 +39,7 @@ namespace PortoSpire\PortoSpireSitesAPIClient;
  * Description of Module
  *
  * @category  Module
- * @package   PortoSireSitesAPIClient
+ * @package   PortoSpireSitesAPIClient
  * @author    andrewwallace
  * @copyright 2021 PORTOSPIRE
  * @license   LGPL 3
@@ -50,7 +50,7 @@ namespace PortoSpire\PortoSpireSitesAPIClient;
 class Module
 {
 
-    const VERSION = "1.1.0";
+    const VERSION = "1.1.1";
 
     public function getConfig()
     {

@@ -7,27 +7,27 @@ A free (LGPL3) client library for use with PortoSpire Sites to abstract various 
 <a href="https://www.portospire.com/">Provided by PortoSpire<br />
     <img src="https://assets.portospire.com/psf/img/portospire%20header%20glow.svg" alt="PortoSpire - be seen" width="182" /></a>
 
-[Introduction](#introduction)
-[Setup](#setup)
-[Usage](#usage)
-* [Mezzio](#mezzio)
-* [Laminas MVC](#laminasmvc)
-* [Standalone](#standalone)
-  
+## Table of Contents ##
+**[1. Introduction](#introduction)**<br />
+**[2. Setup](#setup)**<br />
+**[3. Usage](#usage)**<br />
+  * [3.1. Mezzio](#mezzio)
+  * [3.2. Laminas MVC](#laminasmvc)
+  * [3.3. Standalone](#standalone)
 
-## <a name="introduction" href="#introduction">Introduction</a>
+## 1. Introduction<a name="introduction" href="#introduction"></a>
 This package provides a PortoSpire Sites client to abstract API calls and form submissions to provide and receive 
 data from a site hosted in PortoSpire's services.
 
-## <a name="setup" href="#setup">Setup</a>
+## 2. Setup<a name="setup" href="#setup"></a>
 Add to your project's composer.json
 > composer require portospire/portospiresitesapiclient
 
-## <a name="usage" href="#usage">Usage</a>
+## 3. Usage<a name="usage" href="#usage"></a>
 This package is built to support Laminas Mezzio and Laminas MVC as well 
 as be available as a stand alone library. 
 
-### <a name="mezzio" href="#mezzio">Mezzio</a>
+### 3.1. Mezzio<a name="mezzio" href="#mezzio"></a>
 Add the ConfigProvider class to the config aggregator (typically found in config/config.php)
 > $aggregator = new ConfigAggregator([
 > ...
@@ -35,8 +35,8 @@ Add the ConfigProvider class to the config aggregator (typically found in config
 > ...
 Then use the client in your handlers/middleware as needed for your use cases.
 
-### <a name="laminasmvc" href="#laminasmvc">Laminas MVC</a>
+### 3.2. Laminas MVC<a name="laminasmvc" href="#laminasmvc"></a>
 There should be no additional steps beyond adding to your project's composer.json required to begin using the library with Laminas MVC.
 
-### <a name="standalone" href="#standalone">Standalone</a>
+### 3.3. Standalone<a name="standalone" href="#standalone"></a>
 There should be no additional steps beyond adding to your project's composer.json required to begin using the library.

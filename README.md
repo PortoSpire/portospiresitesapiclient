@@ -1,4 +1,4 @@
-![PortoSpire Sites API Client](https://assets.portospire.com/github.io/portospiresitesapiclientlogo.svg)
+![PortoSpire Sites API Client](https://assets.portospire.com/github.io/portospiresitesapiclientlogo_glow.svg)
 
 ![Version](https://img.shields.io/github/v/release/PortoSpire/portospiresitesapiclient)
 ![Size](https://img.shields.io/github/languages/code-size/PortoSpire/portospiresitesapiclient)
@@ -7,7 +7,7 @@
 A free (LGPL3) client library for use with PortoSpire Sites to abstract various API usage to enable easier integrations.
 
 [Provided by PortoSpire  
-![PortoSpire - be seen](https://assets.portospire.com/psf/img/portospire%20header%20glow.svg)](https://www.portospire.com)
+<img alt="PortoSpire - be seen" src="https://assets.portospire.com/psf/img/portospire%20header%20glow.svg" width="182" />](https://www.portospire.com)
 
 ***
 

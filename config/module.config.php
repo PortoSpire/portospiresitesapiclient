@@ -50,55 +50,55 @@ return [
             'product' => [
                 'class' => '',
                 'children' => [
-                    'page:saved',
-                    'pageblast:saved',
-                    'form:submitted',
-                    'error',
-                    'info',
-                    'notice',
-                    'alert'
+                    'page:saved' => \PortoSpire\PortoSpireSitesAPIClient\Model\Product\Page::class,
+                    'pageblast:saved' => PortoSpire\PortoSpireSitesAPIClient\Model\Product\Pageblast::class,
+                    'form:submitted' => \PortoSpire\PortoSpireSitesAPIClient\Model\Product\Form::class,
+                    'error' => PortoSpire\PortoSpireSitesAPIClient\Model\Product\Error::class,
+                    'info' => PortoSpire\PortoSpireSitesAPIClient\Model\Product\Info::class,
+                    'notice' => \PortoSpire\PortoSpireSitesAPIClient\Model\Product\Notice::class,
+                    'alert' => PortoSpire\PortoSpireSitesAPIClient\Model\Product\Alert::class
                 ]
             ],
             'security' => [
                 'class' => '',
                 'children' => [
-                    'newdevice',
-                    'invalidlogin'
+                    'newdevice' => \PortoSpire\PortoSpireSitesAPIClient\Model\Security\Newdevice::class,
+                    'invalidlogin' => \PortoSpire\PortoSpireSitesAPIClient\Model\Security\Invalidlogin::class
                 ]
             ],
             'service' => [
                 'class' => '',
                 'children' => [
-                    'maintenance',
-                    'outage',
-                    'issue'
+                    'maintenance' => \PortoSpire\PortoSpireSitesAPIClient\Model\Service\Maintenance::class,
+                    'outage' => PortoSpire\PortoSpireSitesAPIClient\Model\Service\Outage::class,
+                    'issue' => PortoSpire\PortoSpireSitesAPIClient\Model\Service\Issue::class
                 ]
             ],
             'activity' => [
                 'class' => '',
                 'children' => [
-                    'usage:weekly',
-                    'usage:monthly',
-                    'usage:daily'
+                    'usage:weekly' => \PortoSpire\PortoSpireSitesAPIClient\Model\Activity\Usage::class,
+                    'usage:monthly' => \PortoSpire\PortoSpireSitesAPIClient\Model\Activity\Usage::class,
+                    'usage:daily' => \PortoSpire\PortoSpireSitesAPIClient\Model\Activity\Usage::class
                 ]
             ],
             'billing' => [
                 'class' => '',
                 'children' => [
-                    'invoice:due',
-                    'payment:complete',
-                    'payment:error',
-                    'updated',
-                    'quote:prepared'
+                    'invoice:due' => \PortoSpire\PortoSpireSitesAPIClient\Model\Billing\Invoice::class,
+                    'payment:complete' => \PortoSpire\PortoSpireSitesAPIClient\Model\Billing\Payment::class,
+                    'payment:error' => \PortoSpire\PortoSpireSitesAPIClient\Model\Billing\Payment::class,
+                    'updated' => \PortoSpire\PortoSpireSitesAPIClient\Model\Billing\Updated::class,
+                    'quote:prepared' => PortoSpire\PortoSpireSitesAPIClient\Model\Billing\Quote::class
                 ]
             ],
             'calendar' => [
                 'class' => '',
                 'children' => [
-                    'event:updated',
-                    'eventtype:updated',
-                    'location:updated',
-                    'recurring:updated'
+                    'event:updated' => PortoSpire\PortoSpireSitesAPIClient\Model\Calendar\Event::class,
+                    'eventtype:updated' => PortoSpire\PortoSpireSitesAPIClient\Model\Calendar\EventType::class,
+                    'location:updated' => PortoSpire\PortoSpireSitesAPIClient\Model\Calendar\Location::class,
+                    'recurring:updated' => \PortoSpire\PortoSpireSitesAPIClient\Model\Calendar\RecurringPattern::class
                 ]
             ]
         ],

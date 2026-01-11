@@ -8939,7 +8939,6 @@
                 }
             },
             "required": [
-                "uid",
                 "site_id",
                 "email",
                 "default",

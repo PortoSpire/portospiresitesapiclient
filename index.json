@@ -17,6 +17,9 @@
             "description": "Domain endpoint"
         },
         {
+            "name": "emailproviders"
+        },
+        {
             "name": "event_tags"
         },
         {
@@ -55,6 +58,12 @@
             "name": "locations"
         },
         {
+            "name": "marketplace_user_subscription"
+        },
+        {
+            "name": "marketplace_vendor_tier"
+        },
+        {
             "name": "menu_items",
             "description": "Menuitem endpoint"
         },
@@ -68,6 +77,21 @@
         {
             "name": "pages",
             "description": "Page endpoint"
+        },
+        {
+            "name": "portopay_gateways"
+        },
+        {
+            "name": "portopay_lineitems"
+        },
+        {
+            "name": "portopay_orders"
+        },
+        {
+            "name": "portopay_payments"
+        },
+        {
+            "name": "portopay_user_subscriptions"
         },
         {
             "name": "profiles"
@@ -87,6 +111,9 @@
         },
         {
             "name": "reviews"
+        },
+        {
+            "name": "site_feature"
         },
         {
             "name": "site"
@@ -112,6 +139,9 @@
         },
         {
             "name": "HybridAuth"
+        },
+        {
+            "name": "MarketplacePaymentHandler"
         }
     ],
     "paths": {
@@ -724,6 +754,221 @@
                         "in": "path",
                         "name": "domain_id",
                         "description": "URL parameter domain_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/emailproviders\/site\/:site_id": {
+            "get": {
+                "tags": [
+                    "emailproviders"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/emailproviders\/site\/:site_id\/{emailproviders_uid}": {
+            "get": {
+                "tags": [
+                    "emailproviders"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "emailproviders_uid",
+                        "description": "URL parameter emailproviders_uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "emailproviders"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "emailproviders_uid",
+                        "description": "URL parameter emailproviders_uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/emailproviders"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "emailproviders"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "emailproviders_uid",
+                        "description": "URL parameter emailproviders_uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/emailproviders"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "emailproviders"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "emailproviders_uid",
+                        "description": "URL parameter emailproviders_uid",
                         "type": "string",
                         "required": true
                     }
@@ -3283,6 +3528,478 @@
                 }
             }
         },
+        "\/marketplace_user_subscription\/{user_uid}": {
+            "get": {
+                "tags": [
+                    "marketplace_user_subscription"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "user_uid",
+                        "description": "URL parameter user_uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "marketplace_user_subscription"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "user_uid",
+                        "description": "URL parameter user_uid",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/marketplace_user_subscription"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "marketplace_user_subscription"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "user_uid",
+                        "description": "URL parameter user_uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/marketplace_user_subscription"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "marketplace_user_subscription"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "user_uid",
+                        "description": "URL parameter user_uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/marketplace_user_subscription"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "marketplace_user_subscription"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "user_uid",
+                        "description": "URL parameter user_uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/marketplace_vendor_tier\/{vendor_uid}": {
+            "get": {
+                "tags": [
+                    "marketplace_vendor_tier"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "vendor_uid",
+                        "description": "URL parameter vendor_uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "marketplace_vendor_tier"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "vendor_uid",
+                        "description": "URL parameter vendor_uid",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/marketplace_vendor_tier"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "marketplace_vendor_tier"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "vendor_uid",
+                        "description": "URL parameter vendor_uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/marketplace_vendor_tier"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "marketplace_vendor_tier"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "vendor_uid",
+                        "description": "URL parameter vendor_uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/marketplace_vendor_tier"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "marketplace_vendor_tier"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "vendor_uid",
+                        "description": "URL parameter vendor_uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
         "\/menu_items": {
             "get": {
                 "tags": [
@@ -4143,6 +4860,1235 @@
                 }
             }
         },
+        "\/portopay_gateways\/site\/:site_id": {
+            "get": {
+                "tags": [
+                    "portopay_gateways"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "portopay_gateways"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_gateways"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/portopay_gateways\/site\/:site_id\/{portopay_gateways_id}": {
+            "get": {
+                "tags": [
+                    "portopay_gateways"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_gateways_id",
+                        "description": "URL parameter portopay_gateways_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "portopay_gateways"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_gateways_id",
+                        "description": "URL parameter portopay_gateways_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_gateways"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "portopay_gateways"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_gateways_id",
+                        "description": "URL parameter portopay_gateways_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_gateways"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "portopay_gateways"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_gateways_id",
+                        "description": "URL parameter portopay_gateways_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/portopay_lineitems": {
+            "get": {
+                "tags": [
+                    "portopay_lineitems"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "portopay_lineitems"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_lineitems"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "\/portopay_lineitems\/{portopay_lineitems_id}": {
+            "get": {
+                "tags": [
+                    "portopay_lineitems"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_lineitems_id",
+                        "description": "URL parameter portopay_lineitems_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "portopay_lineitems"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_lineitems_id",
+                        "description": "URL parameter portopay_lineitems_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_lineitems"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "portopay_lineitems"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_lineitems_id",
+                        "description": "URL parameter portopay_lineitems_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_lineitems"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "portopay_lineitems"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_lineitems_id",
+                        "description": "URL parameter portopay_lineitems_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "\/portopay_orders": {
+            "get": {
+                "tags": [
+                    "portopay_orders"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "portopay_orders"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_orders"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/portopay_orders\/{portopay_orders_id}": {
+            "get": {
+                "tags": [
+                    "portopay_orders"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_orders_id",
+                        "description": "URL parameter portopay_orders_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "portopay_orders"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_orders_id",
+                        "description": "URL parameter portopay_orders_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_orders"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "portopay_orders"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_orders_id",
+                        "description": "URL parameter portopay_orders_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_orders"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "portopay_orders"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_orders_id",
+                        "description": "URL parameter portopay_orders_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/portopay_payments\/{uid}": {
+            "get": {
+                "tags": [
+                    "portopay_payments"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "portopay_payments"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_payments"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "portopay_payments"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_payments"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "portopay_payments"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_payments"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "portopay_payments"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "URL parameter uid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/portopay_user_subscriptions": {
+            "get": {
+                "tags": [
+                    "portopay_user_subscriptions"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "portopay_user_subscriptions"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_user_subscriptions"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "\/portopay_user_subscriptions\/{portopay_user_subscriptions_id}": {
+            "get": {
+                "tags": [
+                    "portopay_user_subscriptions"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_user_subscriptions_id",
+                        "description": "URL parameter portopay_user_subscriptions_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "portopay_user_subscriptions"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_user_subscriptions_id",
+                        "description": "URL parameter portopay_user_subscriptions_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_user_subscriptions"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "portopay_user_subscriptions"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_user_subscriptions_id",
+                        "description": "URL parameter portopay_user_subscriptions_id",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/portopay_user_subscriptions"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "portopay_user_subscriptions"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "portopay_user_subscriptions_id",
+                        "description": "URL parameter portopay_user_subscriptions_id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
         "\/profiles\/{profiles_id}": {
             "get": {
                 "tags": [
@@ -4287,7 +6233,7 @@
                         "name": "event_id",
                         "description": "URL parameter event_id",
                         "type": "string",
-                        "required": true
+                        "required": false
                     },
                     {
                         "in": "body",
@@ -5247,6 +7193,203 @@
                     },
                     "404": {
                         "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "\/site_feature\/site\/:site_id": {
+            "get": {
+                "tags": [
+                    "site_feature"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "site_feature"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/site_feature"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "site_feature"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/site_feature"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "site_feature"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/site_feature"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "site_feature"
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/hal+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
                     }
                 }
             }
@@ -6322,7 +8465,7 @@
                         "name": "user_id",
                         "description": "URL parameter user_id",
                         "type": "string",
-                        "required": true
+                        "required": false
                     }
                 ],
                 "produces": [
@@ -6598,6 +8741,53 @@
                     }
                 }
             }
+        },
+        "\/marketplace_payment": {
+            "post": {
+                "tags": [
+                    "MarketplacePaymentHandler"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/MarketplacePaymentHandler"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application\/vnd.api.v1+json",
+                    "application\/json"
+                ],
+                "responses": {
+                    "406": {
+                        "description": "Not Acceptable"
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "400": {
+                        "description": "Client Error"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -6709,6 +8899,56 @@
                 "site_id",
                 "uri",
                 "active"
+            ]
+        },
+        "emailproviders": {
+            "type": "object",
+            "properties": {
+                "uid": {
+                    "type": "string"
+                },
+                "site_id": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "fromname": {
+                    "type": "string"
+                },
+                "default": {
+                    "type": "string"
+                },
+                "ssl": {
+                    "type": "string"
+                },
+                "auth": {
+                    "type": "string"
+                },
+                "host": {
+                    "type": "string"
+                },
+                "port": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "passphrase": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "uid",
+                "site_id",
+                "email",
+                "default",
+                "ssl",
+                "auth",
+                "host",
+                "port",
+                "username",
+                "passphrase"
             ]
         },
         "event_tags": {
@@ -7166,6 +9406,47 @@
                 "updated"
             ]
         },
+        "marketplace_user_subscription": {
+            "type": "object",
+            "properties": {
+                "user_uid": {
+                    "type": "string"
+                },
+                "subscription_uid": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string"
+                },
+                "expiration": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "user_uid",
+                "subscription_uid",
+                "created",
+                "expiration"
+            ]
+        },
+        "marketplace_vendor_tier": {
+            "type": "object",
+            "properties": {
+                "tier_uid": {
+                    "type": "string"
+                },
+                "vendor_uid": {
+                    "type": "string"
+                },
+                "expires": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "tier_uid",
+                "vendor_uid"
+            ]
+        },
         "menu_items": {
             "type": "object",
             "properties": {
@@ -7322,6 +9603,243 @@
                 "social_share",
                 "include_sitemap"
             ]
+        },
+        "portopay_gateways": {
+            "type": "object",
+            "properties": {
+                "uid": {
+                    "type": "string"
+                },
+                "site_id": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "class": {
+                    "type": "string"
+                },
+                "config": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "uid",
+                "site_id",
+                "created",
+                "updated",
+                "active",
+                "class",
+                "config"
+            ]
+        },
+        "portopay_lineitems": {
+            "type": "object",
+            "properties": {
+                "uid": {
+                    "type": "string"
+                },
+                "order_id": {
+                    "type": "string"
+                },
+                "quantity": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "invoice_id": {
+                    "type": "string"
+                },
+                "product_id": {
+                    "type": "string"
+                },
+                "extra": {
+                    "type": "string"
+                },
+                "count": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "subscription_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "uid",
+                "order_id",
+                "quantity",
+                "price",
+                "name"
+            ]
+        },
+        "portopay_orders": {
+            "type": "object",
+            "properties": {
+                "uid": {
+                    "type": "string"
+                },
+                "site_id": {
+                    "type": "string"
+                },
+                "total": {
+                    "type": "string"
+                },
+                "currency": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "uid",
+                "site_id",
+                "total",
+                "currency",
+                "status",
+                "created",
+                "updated",
+                "description"
+            ]
+        },
+        "portopay_payments": {
+            "type": "object",
+            "properties": {
+                "uid": {
+                    "type": "string"
+                },
+                "total": {
+                    "type": "string"
+                },
+                "currency": {
+                    "type": "string"
+                },
+                "subtotal": {
+                    "type": "string"
+                },
+                "tax": {
+                    "type": "string"
+                },
+                "shipping": {
+                    "type": "string"
+                },
+                "handling": {
+                    "type": "string"
+                },
+                "insurance": {
+                    "type": "string"
+                },
+                "discount": {
+                    "type": "string"
+                },
+                "transaction_fee": {
+                    "type": "string"
+                },
+                "transaction_fee_currency": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "transaction_id": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "site_id": {
+                    "type": "string"
+                },
+                "order_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "total",
+                "currency",
+                "subtotal",
+                "tax",
+                "shipping",
+                "handling",
+                "insurance",
+                "discount",
+                "transaction_fee",
+                "transaction_fee_currency",
+                "status",
+                "transaction_id",
+                "site_id",
+                "order_id"
+            ]
+        },
+        "portopay_user_subscriptions": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                },
+                "subscription_id": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "external_id": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "user_id",
+                "subscription_id",
+                "state",
+                "created",
+                "updated"
+            ],
+            "example": {
+                "id": "",
+                "user_id": "",
+                "subscription_id": "",
+                "state": "",
+                "external_id": "",
+                "created": "",
+                "updated": ""
+            }
         },
         "profiles": {
             "type": "object",
@@ -7520,6 +10038,25 @@
                 "date_ingested"
             ]
         },
+        "site_feature": {
+            "type": "object",
+            "properties": {
+                "active": {
+                    "type": "string"
+                },
+                "site_id": {
+                    "type": "string"
+                },
+                "feature_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "active",
+                "site_id",
+                "feature_id"
+            ]
+        },
         "site": {
             "type": "object",
             "properties": {
@@ -7701,6 +10238,29 @@
                 "lastClick",
                 "active",
                 "tos_accept"
+            ]
+        },
+        "MarketplacePaymentHandler": {
+            "type": "object",
+            "properties": {
+                "order_id": {
+                    "type": "string"
+                },
+                "new_state": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "float"
+                },
+                "amount_currency": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "order_id",
+                "new_state",
+                "amount",
+                "amount_currency"
             ]
         }
     }

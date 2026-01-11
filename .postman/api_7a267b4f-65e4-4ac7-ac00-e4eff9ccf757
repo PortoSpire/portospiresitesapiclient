@@ -9,7 +9,7 @@ id = 7a267b4f-65e4-4ac7-ac00-e4eff9ccf757
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"16792455-0ec3bb4a-28c2-4640-8da4-f9388dfee63f","path":"PortoSpireSites Api.json","metaData":{}}
+files[] = {"id":"16792455-68a09263-4f4a-46b3-8d14-ebbe7ff1a209","path":"PortoSpireSites Api.json","metaData":{}}
 
 [config.relations.collections.metaData]
 

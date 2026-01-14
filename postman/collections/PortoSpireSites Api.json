@@ -24549,7 +24549,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": [
 								{
@@ -24557,10 +24560,14 @@
 									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": ""
+										}
 									},
 									"status": "OK",
 									"code": 200,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24568,10 +24575,14 @@
 									"name": "Unauthorized",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": ""
+										}
 									},
 									"status": "Unauthorized",
 									"code": 401,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24579,10 +24590,14 @@
 									"name": "Not Acceptable",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": ""
+										}
 									},
 									"status": "Not Acceptable",
 									"code": 406,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24590,10 +24605,14 @@
 									"name": "Forbidden",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": ""
+										}
 									},
 									"status": "Forbidden",
 									"code": 403,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24601,10 +24620,14 @@
 									"name": "Unsupported Media Type",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": ""
+										}
 									},
 									"status": "Unsupported Media Type",
 									"code": 415,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								}
 							]
@@ -24662,19 +24685,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24697,19 +24719,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Unauthorized",
 									"code": 401,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24732,19 +24753,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Not Acceptable",
 									"code": 406,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24767,19 +24787,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Unsupported Media Type",
 									"code": 415,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24802,19 +24821,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Forbidden",
 									"code": 403,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								}
 							]
@@ -24872,19 +24890,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24907,19 +24924,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Unauthorized",
 									"code": 401,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24942,19 +24958,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Not Acceptable",
 									"code": 406,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -24977,19 +24992,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Unsupported Media Type",
 									"code": 415,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -25012,19 +25026,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Forbidden",
 									"code": 403,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								}
 							]
@@ -25082,19 +25095,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -25117,19 +25129,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Unauthorized",
 									"code": 401,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -25152,19 +25163,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Not Acceptable",
 									"code": 406,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -25187,19 +25197,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Unsupported Media Type",
 									"code": 415,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								},
 								{
@@ -25222,19 +25231,18 @@
 											"variable": [
 												{
 													"key": "site_id",
-													"value": "",
-													"uuid": "010c8731-91f9-4c11-94ac-0396f32f2455"
+													"value": ""
 												},
 												{
 													"key": "emailprovider_id",
-													"value": "",
-													"uuid": "1473ff4e-0f10-42dc-9509-dca4956d970b"
+													"value": ""
 												}
 											]
 										}
 									},
 									"status": "Forbidden",
 									"code": 403,
+									"_postman_previewlanguage": "Text",
 									"cookie": []
 								}
 							]
@@ -25250,7 +25258,10 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": [
 						{
@@ -25258,10 +25269,14 @@
 							"name": "OK",
 							"originalRequest": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"status": "OK",
 							"code": 200,
+							"_postman_previewlanguage": "Text",
 							"cookie": []
 						},
 						{
@@ -25269,10 +25284,14 @@
 							"name": "Unauthorized",
 							"originalRequest": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"status": "Unauthorized",
 							"code": 401,
+							"_postman_previewlanguage": "Text",
 							"cookie": []
 						},
 						{
@@ -25280,10 +25299,14 @@
 							"name": "Not Acceptable",
 							"originalRequest": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"status": "Not Acceptable",
 							"code": 406,
+							"_postman_previewlanguage": "Text",
 							"cookie": []
 						},
 						{
@@ -25291,10 +25314,14 @@
 							"name": "Unsupported Media Type",
 							"originalRequest": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"status": "Unsupported Media Type",
 							"code": 415,
+							"_postman_previewlanguage": "Text",
 							"cookie": []
 						},
 						{
@@ -25302,10 +25329,14 @@
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"status": "Forbidden",
 							"code": 403,
+							"_postman_previewlanguage": "Text",
 							"cookie": []
 						}
 					]
@@ -25538,19 +25569,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/hybridauth/:action",
+					"raw": "{{baseUrl}}/hybridauth?provider=PortoSpire",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"hybridauth",
-						":action"
+						"hybridauth"
 					],
-					"variable": [
+					"query": [
 						{
-							"key": "action",
-							"value": "ut nostrud laboris",
-							"description": "(Required) URL parameter action"
+							"key": "provider",
+							"value": "PortoSpire"
 						}
 					]
 				}

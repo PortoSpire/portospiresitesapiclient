@@ -208,7 +208,7 @@ class PortoSpireSitesAPIClient {
                 );
             }
             $response = $this->guzzle->send($request);
-            if ($response->getStatusCode() == 200) {
+            if ($response->getStatusCode() == 200 || $response->getStatusCode() == 201) {
                 return json_decode($response->getBody(), true);
             } else {
                 $this->logger->error('PSFramework: unable to make call to destination service');

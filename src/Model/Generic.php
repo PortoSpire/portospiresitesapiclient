@@ -48,74 +48,67 @@ namespace PortoSpire\PortoSpireSitesAPIClient\Model;
  * @since     Class available since Release 0.0.0
  */
 class Generic {
+
     public $id, $type;
     private $attributes;
-    
-    public function __construct($attributes = [])
-    {
+    private $values;
+
+    public function __construct($attributes = []) {
         $this->attributes = $attributes;
     }
-    
-    public function __get($name)
-    {
-        if (array_key_exists($name, $this->attributes)) {
-            return $this->attributes[$name];
+
+    public function __get($name) {
+        if (in_array($name, $this->attributes)) {
+            return isset($this->values[$name]) ? $this->values[$name] : null;
         }
 
         $trace = debug_backtrace();
         trigger_error(
-            'Undefined property via __get(): ' . $name .
-            ' in ' . $trace[0]['file'] .
-            ' on line ' . $trace[0]['line'],
-            E_USER_NOTICE);
+                'Undefined property via __get(): ' . $name .
+                ' in ' . $trace[0]['file'] .
+                ' on line ' . $trace[0]['line'],
+                E_USER_NOTICE);
         return null;
     }
-    
-    public function __set($name, $value)
-    {
-        if(array_key_exists($name, $this->attributes)){
-            $this->attributes[$name] = $value;
+
+    public function __set($name, $value) {
+        if (in_array($name, $this->attributes)) {
+            $this->values[$name] = $value;
         }
     }
-    
-    public function __isset($name)
-    {
-        return isset($this->attributes[$name]);
+
+    public function __isset($name) {
+        return isset($this->values[$name]);
     }
 
-    public function __unset($name)
-    {
-        unset($this->attributes[$name]);
+    public function __unset($name) {
+        unset($this->values[$name]);
     }
-    
-    public function extractNonEmpty(): array
-    {
-        $return = ['id'=>$this->id,'type'=> $this->type];
-        foreach($this->attributes as $key=>$value){
-            if(!empty($value) && !is_array($value)){
-                $return[$key]=$value;
+
+    public function extractNonEmpty(): array {
+        $return = ['id' => $this->id, 'type' => $this->type];
+        foreach ($this->values as $key => $value) {
+            if (!empty($value) && !is_array($value)) {
+                $return[$key] = $value;
             }
         }
         return $return;
     }
-    
-    public function toArray(): array
-    {
-        $arr = ['id'=> $this->id,'type'=>$this->type];
-        foreach ($this->attributes as $key=>$value){
-            $arr[$key] =$value;
+
+    public function toArray(): array {
+        $arr = ['id' => $this->id, 'type' => $this->type];
+        foreach ($this->attributes as $value) {
+            $arr[$value] = $this->$value;
         }
         return $arr;
     }
-    
-    public function exchangeArray(array $data): Generic
-    {
-        foreach($data as $key=>$value)
-        {
-            if(property_exists($this, $key)){
+
+    public function exchangeArray(array $data): Generic {
+        foreach ($data as $key => $value) {
+            if (property_exists($this, $key)) {
                 $this->$key = $value;
             } else {
-                $this->attributes[$key]=$value;
+                $this->values[$key] = $value;
             }
         }
         return $this;

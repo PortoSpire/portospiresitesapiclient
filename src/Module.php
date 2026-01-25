@@ -50,7 +50,7 @@ namespace PortoSpire\PortoSpireSitesAPIClient;
 class Module
 {
 
-    const VERSION = "1.1.1.9";
+    const VERSION = "1.1.2.0";
 
     public function getConfig()
     {

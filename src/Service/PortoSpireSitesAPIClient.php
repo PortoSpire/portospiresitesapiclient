@@ -84,8 +84,8 @@ class PortoSpireSitesAPIClient {
         if (isset($config['password'])) {
             $this->password = $config['password'];
         }
-        $this->guzzle = new Client(['headers' => ['Content-Type'=>'application/vnd.api+json',
-                'Accept'=>'*/*']]);
+        $this->guzzle = new Client(['headers' => ['Content-Type' => 'application/vnd.api+json',
+                'Accept' => '*/*']]);
     }
 
     public function setConfig(array $config) {
@@ -140,6 +140,7 @@ class PortoSpireSitesAPIClient {
         $headerpairs = explode(',', $header);
         $timestamp = time();
         $hashes = [];
+        $id = '';
         foreach ($headerpairs as $pair) {
             $item = explode('=', $pair);
             switch ($item[0]) {
@@ -149,11 +150,14 @@ class PortoSpireSitesAPIClient {
                 case 'v1':
                     $hashes[] = $item[1];
                     break;
+                case 'id':
+                    $id = $item[1];
+                    break;
                 default: // do nothing with any other keys
                     break;
             }
         }
-        return ['timestamp' => $timestamp, 'hashes' => $hashes];
+        return ['id' => $id, 'timestamp' => $timestamp, 'hashes' => $hashes];
     }
 
     /*
@@ -170,7 +174,7 @@ class PortoSpireSitesAPIClient {
             $this->logger->notice('PSFramework: webhook signature timestamp is too old.');
             throw new UnexpectedValueException('Signature timestamp is too old');
         }
-        $newhash = hash_hmac('sha256', $parsed['timestamp'] . '.' . $body, $secret, true);
+        $newhash = hash_hmac('sha256', $parsed['id'] . '.' . $parsed['timestamp'] . '.' . $body, $secret, true);
         $matched = false;
         foreach ($parsed['hashes'] as $hash) {
             if (hash_equals($newhash, $hash)) {

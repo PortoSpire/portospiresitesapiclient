@@ -170,14 +170,21 @@ class PortoSpireSitesAPIClient {
             $header = $_SERVER['HTTP_X_PSFRAMEWORK_SIGNATURE'];
         }
         $parsed = $this->extractSignatureVars($header);
-        if ($parsed['timestamp'] > time() - 1000 * 60 * 5) {
+        if ((int) $parsed['timestamp'] > 1) { // some variables could get assigned a boolean 1 when invalid
+            $this->logger->notice('PSFramework: webhook signature timestamp is not valid');
+            throw new UnexpectedValueException("Signature timestamp is invalid");
+        } elseif ($parsed['timestamp'] < strtotime('-5 minutes')) {
             $this->logger->notice('PSFramework: webhook signature timestamp is too old.');
             throw new UnexpectedValueException('Signature timestamp is too old');
+        } elseif ($parsed['timestamp'] > strtotime('+1 minute')) {
+            $this->logger->notice('PSFramework: webhook signature timestamp is not old enough.');
+            throw new UnexpectedValueException('Signature timestamp is not old enough');
         }
-        $newhash = hash_hmac('sha256', $parsed['id'] . '.' . $parsed['timestamp'] . '.' . $body, $secret, true);
+        $hexHash = hash_hmac('sha256', $parsed['id'] . '.' . $parsed['timestamp'] . '.' . $body, $secret, true);
+        $signature = base64_encode(pack('H*', $hexHash));
         $matched = false;
         foreach ($parsed['hashes'] as $hash) {
-            if (hash_equals($newhash, $hash)) {
+            if (hash_equals($signature, $hash)) {
                 $matched = true;
             }
         }

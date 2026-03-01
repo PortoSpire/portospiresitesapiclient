@@ -52,6 +52,6 @@ use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 class Category extends Generic{
     public function __construct($attributes = ['uid','site_id','image','name','description']) {
         parent::__construct($attributes);
-        $this->type = 'calendar.category:updated';
+        $this->type = 'product.calendar.category:updated';
     }
 }

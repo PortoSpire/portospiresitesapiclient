@@ -52,6 +52,6 @@ use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 class Calendar extends Generic{
     public function __construct($attributes = ['name', 'site_id', 'calendar_id', 'description', 'active', 'template_id', 'template_name']) {
         parent::__construct($attributes);
-        $this->type = 'calendar:updated';
+        $this->type = 'product.calendar:updated';
     }
 }

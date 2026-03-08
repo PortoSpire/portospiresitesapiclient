@@ -54,6 +54,6 @@ class Location extends Generic{
         'description', 'active', 'created', 'updated', 'image', 'street', 'street2', 
         'city', 'region', 'country', 'postalCode', 'lat', 'lon', 'external_id']) {
         parent::__construct($attributes);
-        $this->type = 'calendar.location:updated';
+        $this->type = 'product.calendar.location:updated';
     }
 }

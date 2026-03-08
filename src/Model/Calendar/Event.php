@@ -58,6 +58,6 @@ class Event extends Generic{
             'hide_end_date', 'capacity', 'sold', 'currency', 'minimum_price', 'maximum_price',
             'external_url', 'external_id','location_id', 'external_source']) {
         parent::__construct($attributes);
-        $this->type = 'calendar.event:updated';
+        $this->type = 'product.calendar.event:updated';
     }
 }

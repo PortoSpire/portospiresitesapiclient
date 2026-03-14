@@ -184,6 +184,7 @@ class PortoSpireSitesAPIClient {
             $this->logger->notice('PSFramework: webhook signature timestamp is not old enough.');
             throw new UnexpectedValueException('Signature timestamp is not old enough');
         }
+
         $signature = $this->signWebhookSync($parsed['id'], $parsed['timestamp'], $body, $secret);
         $matched = false;
         foreach ($parsed['hashes'] as $hash) {

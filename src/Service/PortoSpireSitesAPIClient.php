@@ -142,7 +142,7 @@ class PortoSpireSitesAPIClient {
         $hashes = [];
         $id = '';
         foreach ($headerpairs as $pair) {
-            $item = explode('=', $pair);
+            $item = explode('=', $pair, 2);
             switch ($item[0]) {
                 case 't':
                     $timestamp = $item[1];
@@ -161,8 +161,7 @@ class PortoSpireSitesAPIClient {
     }
 
     public function signWebhookSync($id, $timestamp, $body, $secret) {
-        return base64_encode(pack('H*', hash_hmac('sha256', $parsed['id'] . '.' . $parsed['timestamp'] . '.' . $body, $secret, true)));
-
+        return base64_encode(pack('H*', hash_hmac('sha256', $id . '.' . $timestamp . '.' . $body, $secret)));
     }
 
     /*
@@ -175,7 +174,7 @@ class PortoSpireSitesAPIClient {
             $header = $_SERVER['HTTP_X_PSFRAMEWORK_SIGNATURE'];
         }
         $parsed = $this->extractSignatureVars($header);
-        if ((int) $parsed['timestamp'] > 1) { // some variables could get assigned a boolean 1 when invalid
+        if ((int) $parsed['timestamp'] <= 1) { // some variables could get assigned a boolean 1 when invalid
             $this->logger->notice('PSFramework: webhook signature timestamp is not valid');
             throw new UnexpectedValueException("Signature timestamp is invalid");
         } elseif ($parsed['timestamp'] < strtotime('-5 minutes')) {

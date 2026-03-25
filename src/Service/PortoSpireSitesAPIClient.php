@@ -171,7 +171,14 @@ class PortoSpireSitesAPIClient {
 
     public function verifyWebhook($secret, $body, $header = ''): bool {
         if (empty($header)) {
-            $header = $_SERVER['HTTP_X_PSFRAMEWORK_SIGNATURE'];
+            if (isset($_SERVER['HTTP_X_PSFRAMEWORK_SIGNATURE'])) {
+                $header = $_SERVER['HTTP_X_PSFRAMEWORK_SIGNATURE'];
+            } elseif (isset($_SERVER['HTTP_WEBHOOK_ID']) && isset($_SERVER['HTTP_WEBHOOK_TIMESTAMP']) && isset($_SERVER['HTTP_WEBHOOK_SIGNATURE'])) {
+                $header = 'id=' . $_SERVER['HTTP_WEBHOOK_ID'] . ',t=' . $_SERVER['HTTP_WEBHOOK_TIMESTAMP'] . ',' . $_SERVER['HTTP_WEBHOOK_SIGNATURE'];
+            } else {
+                $this->logger->notice('PSFramework: unable to location webhook metadata from expected headers');
+                throw new UnexpectedValueException('Unable to locate webhook metadata from expected headers');
+            }
         }
         $parsed = $this->extractSignatureVars($header);
         if ((int) $parsed['timestamp'] <= 1) { // some variables could get assigned a boolean 1 when invalid

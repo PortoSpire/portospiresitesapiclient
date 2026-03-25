@@ -52,6 +52,6 @@ use PortoSpire\PortoSpireSitesAPIClient\Model\Generic;
 class EventType extends Generic{
     public function __construct($attributes = ['eventtype_id', 'calendar_id', 'name', 'config']) {
         parent::__construct($attributes);
-        $this->type = 'calendar.eventtype:updated';
+        $this->type = 'product.calendar.eventtype:updated';
     }
 }

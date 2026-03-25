@@ -53,6 +53,6 @@ class RecurringPattern extends Generic{
     public function __construct($attributes = ['event_id', 'recurring_type', 
         'max_num_of_occurences', 'separation_count', 'day_of_week', 'day_of_month', 'month_of_year']) {
         parent::__construct($attributes);
-        $this->type = 'calendar.recurring:updated';
+        $this->type = 'product.calendar.recurring:updated';
     }
 }

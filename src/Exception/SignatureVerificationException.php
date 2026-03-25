@@ -35,7 +35,6 @@
 
 namespace PortoSpire\PortoSpireSitesAPIClient\Exception;
 
-use Exception;
 
 /**
  * Description of SignatureVerificationException
